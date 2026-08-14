@@ -8,6 +8,27 @@ function normalizeOpen(value: string) {
   return value.trim().replace(",", ".").replace(/\s+/g, "").toLowerCase();
 }
 
+function matchPairScore(item: Extract<HomeworkItem, { type: "match" }>, answer: unknown): { correct: number; total: number } {
+  const a = (answer ?? {}) as Record<string, string>;
+  const total = Object.keys(item.answer).length;
+  let correct = 0;
+  for (const [k, v] of Object.entries(item.answer)) {
+    if (a[k] === v) correct += 1;
+  }
+  return { correct, total };
+}
+
+function nmtPoints(item: HomeworkItem, answer: unknown): { got: number; max: number } {
+  if (item.type === "single") {
+    return { got: checkItem(item, answer) ? 1 : 0, max: 1 };
+  }
+  if (item.type === "open") {
+    return { got: checkItem(item, answer) ? 2 : 0, max: 2 };
+  }
+  const p = matchPairScore(item, answer);
+  return { got: p.correct, max: p.total };
+}
+
 function checkItem(item: HomeworkItem, answer: unknown): boolean {
   if (item.type === "single") {
     return answer === item.answer;
@@ -32,13 +53,20 @@ export function HomeworkPlayer({ lessonId, items }: { lessonId: string; items: H
     setChecked(Boolean(p.homeworkChecked));
   }, [lessonId]);
 
+  const isMock = lessonId.startsWith("m7-");
+
   const score = useMemo(() => {
     if (!checked) return null;
     let correct = 0;
+    let nmtGot = 0;
+    let nmtMax = 0;
     for (const item of items) {
       if (checkItem(item, answers[item.id])) correct += 1;
+      const pts = nmtPoints(item, answers[item.id]);
+      nmtGot += pts.got;
+      nmtMax += pts.max;
     }
-    return { correct, total: items.length };
+    return { correct, total: items.length, nmtGot, nmtMax };
   }, [checked, answers, items]);
 
   function setAnswer(id: string, value: unknown) {
@@ -53,12 +81,17 @@ export function HomeworkPlayer({ lessonId, items }: { lessonId: string; items: H
   function onCheck() {
     setChecked(true);
     let correct = 0;
+    let nmtGot = 0;
+    let nmtMax = 0;
     for (const item of items) {
       if (checkItem(item, answers[item.id])) correct += 1;
+      const pts = nmtPoints(item, answers[item.id]);
+      nmtGot += pts.got;
+      nmtMax += pts.max;
     }
     updateLessonProgress(lessonId, {
       homeworkChecked: true,
-      homeworkScore: { correct, total: items.length },
+      homeworkScore: { correct, total: items.length, nmtGot, nmtMax },
     });
   }
 
@@ -70,6 +103,9 @@ export function HomeworkPlayer({ lessonId, items }: { lessonId: string; items: H
     <div className="space-y-8">
       {items.map((item, idx) => {
         const ok = checked ? checkItem(item, answers[item.id]) : null;
+        const pairScore =
+          checked && item.type === "match" ? matchPairScore(item, answers[item.id]) : null;
+        const partial = pairScore !== null && pairScore.correct > 0 && pairScore.correct < pairScore.total;
         return (
           <article
             key={item.id}
@@ -150,10 +186,12 @@ export function HomeworkPlayer({ lessonId, items }: { lessonId: string; items: H
             {checked && (
               <div
                 className={`mt-4 rounded-[var(--radius-sm)] px-3 py-2 text-sm ${
-                  ok ? "bg-mist text-forest" : "bg-amber-soft text-ink"
+                  ok || partial ? "bg-mist text-forest" : "bg-amber-soft text-ink"
                 }`}
               >
-                <p className="font-semibold">{ok ? "Правильно" : "Неправильно"}</p>
+                <p className="font-semibold">
+                  {ok ? "Правильно" : partial && pairScore ? `Частково: ${pairScore.correct}/${pairScore.total}` : "Неправильно"}
+                </p>
                 <p className="mt-1 text-forest/80">{item.explanation}</p>
                 {item.type === "single" && (
                   <p className="mt-1">Правильна відповідь: {item.answer}</p>
@@ -183,7 +221,9 @@ export function HomeworkPlayer({ lessonId, items }: { lessonId: string; items: H
         </button>
         {score && (
           <p className="font-[family-name:var(--font-display)] text-lg font-semibold text-ink">
-            Результат: {score.correct}/{score.total}
+            {isMock
+              ? `Тестові бали: ${score.nmtGot}/${score.nmtMax}`
+              : `Результат: ${score.correct}/${score.total}`}
           </p>
         )}
       </div>

@@ -49,13 +49,7 @@ export function LeadRequestForm({ variant = "hero", source = "landing_hero" }: P
 
   if (done) {
     return (
-      <div
-        className={
-          isHero
-            ? "rounded-2xl border border-teal/30 bg-[#06261c]/95 p-7 text-white shadow-[0_24px_80px_rgba(0,0,0,0.35)]"
-            : "mt-8 max-w-lg rounded-2xl border border-white/20 bg-white/10 p-6"
-        }
-      >
+      <div className={isHero ? "hero-card p-7 text-white" : "mt-8 max-w-lg rounded-2xl border border-white/20 bg-white/10 p-6"}>
         <p className="font-[family-name:var(--font-display)] text-xl font-semibold">Заявку отримано</p>
         <p className="mt-2 text-sm text-white/75">
           Менеджер звʼяжеться щодо безкоштовної діагностики. Повідомлення вже в Telegram команди.
@@ -69,70 +63,109 @@ export function LeadRequestForm({ variant = "hero", source = "landing_hero" }: P
 
   if (isHero) {
     return (
-      <form
-        onSubmit={onSubmit}
-        className="rounded-2xl border border-white/12 bg-[#06261c]/88 p-6 text-white shadow-[0_28px_90px_rgba(0,0,0,0.4)] backdrop-blur-xl sm:p-8"
-      >
-        <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-teal/20 px-3 py-1 text-[11px] font-semibold tracking-wide text-teal-bright uppercase">
-          <span className="h-1.5 w-1.5 rounded-full bg-teal-bright" />
-          Безкоштовно · 10 хв
-        </div>
-        <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold leading-snug sm:text-2xl">
-          Діагностика рівня НМТ
-        </h2>
-        <p className="mt-2 text-sm leading-relaxed text-white/55">
-          Стартовий бал, слабкі теми й рекомендація потоку — без продажного уроку 1-на-1.
-        </p>
+      <form onSubmit={onSubmit} className="hero-card overflow-hidden text-white">
+        <div className="border-b border-white/10 bg-white/[0.03] px-5 py-4 sm:px-6">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="text-[11px] font-semibold tracking-wide text-teal-bright uppercase">
+                Mock НМТ · математика
+              </p>
+              <p className="mt-0.5 text-xs text-white/50">типовий прогрес за 5 місяців</p>
+            </div>
+            <span className="rounded-full bg-amber/20 px-2.5 py-1 text-xs font-bold text-amber">+58</span>
+          </div>
 
-        <div className="mt-6 space-y-3">
-          <label className="block">
-            <span className="mb-1.5 block text-xs font-medium text-white/50">Імʼя</span>
-            <input
-              required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Марія"
-              className="w-full rounded-xl border border-white/12 bg-[#04140f] px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-teal-bright/60 focus:ring-2 focus:ring-teal/25"
-            />
-          </label>
-          <label className="block">
-            <span className="mb-1.5 block text-xs font-medium text-white/50">Телефон</span>
-            <div className="flex overflow-hidden rounded-xl border border-white/12 bg-[#04140f] transition focus-within:border-teal-bright/60 focus-within:ring-2 focus-within:ring-teal/25">
-              <span className="flex items-center border-r border-white/10 px-3 text-sm text-white/55">
-                +380
-              </span>
+          <div className="mt-4 flex items-end justify-between gap-3">
+            <div>
+              <p className="text-[10px] text-white/40 uppercase">було</p>
+              <p className="font-[family-name:var(--font-display)] text-2xl font-semibold text-white/45">118</p>
+            </div>
+            <div className="mb-2 h-px flex-1 bg-gradient-to-r from-white/10 via-teal to-amber" />
+            <div className="text-right">
+              <p className="text-[10px] text-white/40 uppercase">стало</p>
+              <p className="font-[family-name:var(--font-display)] text-3xl font-semibold">176</p>
+            </div>
+          </div>
+
+          <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/10">
+            <div className="animate-bar h-full rounded-full bg-gradient-to-r from-teal to-amber" style={{ width: "88%" }} />
+          </div>
+
+          <div className="mt-3 grid grid-cols-3 gap-2 text-center">
+            {[
+              { l: "теми", v: "42/48" },
+              { l: "ДЗ", v: "96%" },
+              { l: "mock", v: "4" },
+            ].map((x) => (
+              <div key={x.l} className="rounded-lg bg-black/25 px-2 py-2">
+                <p className="font-[family-name:var(--font-display)] text-xs font-semibold">{x.v}</p>
+                <p className="text-[9px] tracking-wide text-white/40 uppercase">{x.l}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="p-5 sm:p-6">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-teal/15 px-3 py-1 text-[11px] font-semibold tracking-wide text-teal-bright uppercase">
+            <span className="h-1.5 w-1.5 rounded-full bg-teal-bright" />
+            Безкоштовно · 10 хв
+          </div>
+          <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold leading-snug sm:text-[1.35rem]">
+            Діагностика рівня{" "}
+            <span className="bg-gradient-to-r from-teal to-teal-bright bg-clip-text text-transparent">НМТ</span>
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-white/55">
+            Стартовий бал, слабкі теми й рекомендація потоку — без продажного уроку 1-на-1.
+          </p>
+
+          <div className="mt-5 space-y-3">
+            <label className="block">
+              <span className="mb-1.5 block text-xs font-medium text-white/50">Імʼя</span>
               <input
                 required
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="XX XXX XX XX"
-                inputMode="tel"
-                className="w-full bg-transparent px-3 py-3 text-sm text-white outline-none placeholder:text-white/30"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Марія"
+                className="w-full rounded-xl border border-white/12 bg-black/40 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-teal/70 focus:ring-2 focus:ring-teal/20"
               />
-            </div>
-          </label>
+            </label>
+            <label className="block">
+              <span className="mb-1.5 block text-xs font-medium text-white/50">Телефон</span>
+              <div className="flex overflow-hidden rounded-xl border border-white/12 bg-black/40 transition focus-within:border-teal/70 focus-within:ring-2 focus-within:ring-teal/20">
+                <span className="flex items-center border-r border-white/10 px-3 text-sm text-white/55">+380</span>
+                <input
+                  required
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="XX XXX XX XX"
+                  inputMode="tel"
+                  className="w-full bg-transparent px-3 py-3 text-sm text-white outline-none placeholder:text-white/30"
+                />
+              </div>
+            </label>
+          </div>
+
+          <input
+            type="text"
+            name="company"
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+            tabIndex={-1}
+            autoComplete="off"
+            className="hidden"
+            aria-hidden
+          />
+
+          {error && <p className="mt-3 text-sm text-amber">{error}</p>}
+
+          <button type="submit" disabled={loading} className="btn-primary mt-5 w-full disabled:opacity-50">
+            {loading ? "Надсилаємо…" : "Залишити заявку"}
+          </button>
+
+          <p className="mt-4 text-center text-xs leading-relaxed text-white/40">
+            Менеджер напише в Telegram або зателефонує протягом дня.
+          </p>
         </div>
-
-        <input
-          type="text"
-          name="company"
-          value={honeypot}
-          onChange={(e) => setHoneypot(e.target.value)}
-          tabIndex={-1}
-          autoComplete="off"
-          className="hidden"
-          aria-hidden
-        />
-
-        {error && <p className="mt-3 text-sm text-amber">{error}</p>}
-
-        <button type="submit" disabled={loading} className="btn-primary mt-5 w-full disabled:opacity-50">
-          {loading ? "Надсилаємо…" : "Залишити заявку"}
-        </button>
-
-        <p className="mt-4 text-center text-xs leading-relaxed text-white/40">
-          Менеджер напише в Telegram або зателефонує протягом дня.
-        </p>
       </form>
     );
   }

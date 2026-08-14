@@ -27,8 +27,17 @@ export function TheoryBlocks({ blocks }: { blocks: TheoryBlock[] }) {
         if (block.type === "example") {
           return (
             <div key={i} className="border-l-4 border-teal bg-white/80 px-4 py-3 text-sm text-ink md:text-base">
-              <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-teal">Приклад</p>
-              {block.content}
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-teal">Приклад / розбір</p>
+              <p className="whitespace-pre-wrap leading-relaxed">{block.content}</p>
+              {block.items && block.items.length > 0 && (
+                <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-forest/85">
+                  {block.items.map((item, j) => (
+                    <li key={j} className="whitespace-pre-wrap">
+                      {item}
+                    </li>
+                  ))}
+                </ol>
+              )}
             </div>
           );
         }
@@ -53,7 +62,7 @@ export function TheoryBlocks({ blocks }: { blocks: TheoryBlock[] }) {
           );
         }
         return (
-          <p key={i} className="leading-relaxed text-forest/90">
+          <p key={i} className="whitespace-pre-wrap leading-relaxed text-forest/90">
             {block.content}
           </p>
         );

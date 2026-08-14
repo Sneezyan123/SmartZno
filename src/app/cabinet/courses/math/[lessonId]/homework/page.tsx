@@ -21,7 +21,9 @@ export default async function LessonHomeworkPage({
             <LessonNav lessonId={lessonId} active="homework" />
           </div>
           <p className="mb-2 text-forest/70">
-            Формати як на НМТ: вибір відповіді, логічні пари, коротка відповідь.
+            {lesson.moduleId === "m7"
+              ? "Формат НМТ: 15×1 бал, 3×логічні пари (по 1 за пару), 4×відкриті по 2 бали. Максимум 32."
+              : "Формати як на НМТ: вибір відповіді, логічні пари, коротка відповідь."}
           </p>
           <HomeworkPlayer lessonId={lessonId} items={lesson.homework} />
         </div>

@@ -3,7 +3,7 @@ export type LessonProgress = {
   cardsSeen: string[];
   homeworkAnswers: Record<string, unknown>;
   homeworkChecked?: boolean;
-  homeworkScore?: { correct: number; total: number };
+  homeworkScore?: { correct: number; total: number; nmtGot?: number; nmtMax?: number };
   updatedAt: string;
 };
 

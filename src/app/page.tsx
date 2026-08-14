@@ -1,4 +1,5 @@
 ﻿import Link from "next/link";
+import { BrandLogo } from "@/components/BrandLogo";
 import { LeadRequestForm } from "@/components/LeadRequestForm";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StickyCta } from "@/components/StickyCta";
@@ -17,7 +18,7 @@ const subjects = [
     teacher: "Анна",
     price: "від 990 ₴",
     focus: "Формули, таймінг і типові пастки розгорнутих задач",
-    accent: "from-[#1a9b6c] to-[#0b3d30]",
+    accent: "from-[#e14aff] to-[#7c1fa8]",
   },
   {
     name: "Українська мова",
@@ -25,7 +26,7 @@ const subjects = [
     teacher: "Дарія",
     price: "від 990 ₴",
     focus: "Правила через систему, розбір помилок, які зʼїдають бали",
-    accent: "from-[#0f766e] to-[#134e4a]",
+    accent: "from-[#c026d3] to-[#4a044e]",
   },
   {
     name: "Історія України",
@@ -33,7 +34,7 @@ const subjects = [
     teacher: "Ілля",
     price: "від 990 ₴",
     focus: "Хронологія й причинно-наслідкові звʼязки замість списків дат",
-    accent: "from-[#b45309] to-[#7c2d12]",
+    accent: "from-[#f5c518] to-[#a16207]",
   },
   {
     name: "Англійська",
@@ -41,7 +42,7 @@ const subjects = [
     teacher: "Марія",
     price: "від 990 ₴",
     focus: "Граматика, читання й лексика строго під формат НМТ",
-    accent: "from-[#0369a1] to-[#0c4a6e]",
+    accent: "from-[#a21caf] to-[#3b0764]",
   },
   {
     name: "Біологія",
@@ -49,7 +50,7 @@ const subjects = [
     teacher: "Христина",
     price: "від 990 ₴",
     focus: "Від клітини до систем — з акцентом на медвступ",
-    accent: "from-[#15803d] to-[#14532d]",
+    accent: "from-[#e879f9] to-[#86198f]",
   },
   {
     name: "Географія",
@@ -57,7 +58,7 @@ const subjects = [
     teacher: "Юлія",
     price: "від 990 ₴",
     focus: "Карти, природа, економіка в логіці тестових блоків",
-    accent: "from-[#0d9488] to-[#115e59]",
+    accent: "from-[#f0abfc] to-[#6b21a8]",
   },
 ];
 
@@ -69,7 +70,7 @@ const teachers = [
     years: "5 років",
     note: "Склала іспит на 200. Веде когорти з нуля до розгорнутих задач.",
     highlight: "210+ учнів з 180+",
-    tone: "bg-[#d8f3e8] text-[#0b3d30]",
+    tone: "bg-[#f5d0fe] text-[#6b21a8]",
   },
   {
     name: "Дарія",
@@ -78,7 +79,7 @@ const teachers = [
     years: "4 роки",
     note: "Пояснює складні правила просто. Стипендіантка КНУ.",
     highlight: "Фокус на типових помилках",
-    tone: "bg-[#e0f2f1] text-[#134e4a]",
+    tone: "bg-[#fae8ff] text-[#86198f]",
   },
   {
     name: "Ілля",
@@ -87,7 +88,7 @@ const teachers = [
     years: "7 років",
     note: "Автор методики SmartZno. Вчить через логіку епох, не списки.",
     highlight: "12 500+ учнів за карʼєру",
-    tone: "bg-[#ffedd5] text-[#9a3412]",
+    tone: "bg-[#fef3c7] text-[#854d0e]",
   },
   {
     name: "Марія",
@@ -96,7 +97,7 @@ const teachers = [
     years: "6 років",
     note: "Філологія та переклад. Стратегії читання під таймер НМТ.",
     highlight: "Середній приріст групи +38",
-    tone: "bg-[#e0f2fe] text-[#075985]",
+    tone: "bg-[#f3e8ff] text-[#6b21a8]",
   },
 ];
 
@@ -230,63 +231,6 @@ function Check({ on }: { on: boolean }) {
   );
 }
 
-function HeroScoreboard() {
-  return (
-    <div className="animate-float relative hidden lg:block" aria-hidden>
-      <div className="absolute -inset-6 rounded-[2rem] bg-teal/20 blur-3xl" />
-      <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-[#041c16]/80 p-5 shadow-[0_30px_90px_rgba(0,0,0,0.45)] backdrop-blur-xl">
-        <div className="flex items-center justify-between gap-3">
-          <div>
-            <p className="text-[11px] font-semibold tracking-wide text-teal-bright uppercase">
-              Mock НМТ · математика
-            </p>
-            <p className="mt-1 text-sm text-white/55">прогрес за 5 місяців</p>
-          </div>
-          <span className="rounded-full bg-amber/20 px-2.5 py-1 text-xs font-bold text-amber">+58</span>
-        </div>
-
-        <div className="mt-6 flex items-end justify-between gap-4">
-          <div>
-            <p className="text-xs text-white/40">було</p>
-            <p className="font-[family-name:var(--font-display)] text-3xl font-semibold text-white/45">
-              118
-            </p>
-          </div>
-          <div className="mb-2 h-px flex-1 bg-gradient-to-r from-white/10 via-teal-bright/50 to-amber" />
-          <div className="text-right">
-            <p className="text-xs text-white/40">стало</p>
-            <p className="font-[family-name:var(--font-display)] text-4xl font-semibold text-white">
-              176
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-5 h-2 overflow-hidden rounded-full bg-white/10">
-          <div
-            className="animate-bar h-full rounded-full bg-gradient-to-r from-teal to-amber"
-            style={{ width: "88%" }}
-          />
-        </div>
-
-        <div className="mt-5 grid grid-cols-3 gap-2 text-center">
-          {[
-            { l: "теми", v: "42/48" },
-            { l: "ДЗ", v: "96%" },
-            { l: "mock", v: "4" },
-          ].map((x) => (
-            <div key={x.l} className="rounded-xl bg-white/5 px-2 py-3">
-              <p className="font-[family-name:var(--font-display)] text-sm font-semibold text-white">
-                {x.v}
-              </p>
-              <p className="mt-0.5 text-[10px] text-white/40 uppercase">{x.l}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function HomePage() {
   return (
     <main className="pb-24 md:pb-0">
@@ -294,48 +238,63 @@ export default function HomePage() {
       <StickyCta />
 
       {/* Hero */}
-      <section id="consult" className="relative min-h-[100svh] overflow-hidden text-white">
+      <section id="consult" className="relative min-h-[100svh] overflow-hidden bg-night text-white">
         <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,rgba(62,207,152,0.28)_0%,transparent_50%),radial-gradient(ellipse_at_90%_20%,rgba(240,164,26,0.16)_0%,transparent_42%),linear-gradient(165deg,#02140f_0%,#0a3d2e_46%,#05241c_100%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(192,38,211,0.34),transparent_50%)]"
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
-          }}
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(124,31,168,0.4),transparent_46%)]"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -bottom-24 -right-16 h-[28rem] w-[28rem] rounded-full border border-teal/20"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -bottom-8 -right-4 h-[18rem] w-[18rem] rounded-full border border-teal/15"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute bottom-16 right-20 h-[10rem] w-[10rem] rounded-full border border-teal/10"
           aria-hidden
         />
 
-        <div className="relative mx-auto grid min-h-[100svh] max-w-6xl items-center gap-10 px-5 pb-16 pt-32 md:gap-12 md:px-8 md:pb-20 md:pt-28 lg:grid-cols-[1.05fr_0.75fr_0.95fr]">
+        <div className="relative mx-auto grid min-h-[100svh] max-w-6xl items-center gap-10 px-5 pb-16 pt-28 md:grid-cols-2 md:gap-14 md:px-8 md:pb-20 md:pt-24">
           <div>
-            <p className="animate-fade-up inline-flex items-center gap-2 text-sm font-semibold tracking-[0.14em] text-teal-bright uppercase">
-              <span className="h-px w-6 bg-teal-bright/70" />
-              SmartZno
+            <p className="animate-fade-up inline-flex rounded-full border border-teal/40 bg-teal/15 px-3.5 py-1.5 text-[11px] font-semibold tracking-wide text-white uppercase">
+              Онлайн-школа підготовки до НМТ · 9–11 клас
             </p>
-            <h1 className="animate-fade-up-delay-1 mt-5 max-w-xl font-[family-name:var(--font-display)] text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl md:text-[3.4rem]">
-              Від хаосу підготовки — до плану на{" "}
-              <span className="text-amber">180+</span>
+            <h1 className="animate-fade-up-delay-1 mt-6 max-w-xl font-[family-name:var(--font-display)] text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl md:text-[3.35rem]">
+              <span className="text-white">від хаосу репетиторів —</span>
+              <br />
+              <span className="bg-gradient-to-r from-teal via-teal-bright to-[#f0abfc] bg-clip-text text-transparent">
+                до плану на 180+
+              </span>
             </h1>
-            <p className="animate-fade-up-delay-2 mt-5 max-w-md text-base leading-relaxed text-white/68 md:text-lg">
+            <p className="animate-fade-up-delay-2 mt-5 max-w-md text-base leading-relaxed text-white/70 md:text-lg">
               Діагностика, когорта за рівнем, куратор і щомісячний mock. Підписка від 990 ₴/міс за
               предмет.
             </p>
-            <div className="animate-fade-up-delay-3 mt-8 flex flex-wrap items-center gap-3">
-              <a href="#consult-form" className="btn-primary">
-                Записатися на діагностику
-              </a>
+            <div className="animate-fade-up-delay-3 mt-7 inline-flex flex-wrap items-center gap-x-3 gap-y-1 rounded-full border border-teal/35 bg-violet/30 px-4 py-2 text-sm text-white/85">
+              <span>12 400+ учнів</span>
+              <span className="text-teal">·</span>
+              <span>183/200 середній бал</span>
+              <span className="text-teal">·</span>
+              <span>+51 приріст</span>
+            </div>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link href="/diagnostic" className="btn-ghost">
-                Тест онлайн
+                Пройти тест онлайн
               </Link>
             </div>
           </div>
 
-          <HeroScoreboard />
-
-          <div id="consult-form" className="animate-fade-up-delay-2">
-            <LeadRequestForm variant="hero" source="landing_hero" />
+          <div id="consult-form" className="animate-fade-up-delay-2 relative">
+            <div className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-teal/25 blur-3xl" aria-hidden />
+            <div className="relative">
+              <LeadRequestForm variant="hero" source="landing_hero" />
+            </div>
           </div>
         </div>
       </section>
@@ -372,7 +331,7 @@ export default function HomePage() {
                 Ми зібрали це в зрозумілу підписку — для батьків і для учня.
               </p>
             </div>
-            <div className="rounded-2xl bg-gradient-to-br from-forest to-ink p-6 text-white">
+            <div className="rounded-2xl bg-gradient-to-br from-violet to-ink p-6 text-white">
               <p className="font-[family-name:var(--font-display)] text-4xl font-semibold">183/200</p>
               <p className="mt-1 text-sm text-white/60">середній бал учнів · приріст +51</p>
             </div>
@@ -495,9 +454,9 @@ export default function HomePage() {
       </section>
 
       {/* Included */}
-      <section id="results" className="relative overflow-hidden bg-forest py-16 text-white md:py-24">
+      <section id="results" className="relative overflow-hidden bg-night py-16 text-white md:py-24">
         <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_0%,rgba(62,207,152,0.2)_0%,transparent_45%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(192,38,211,0.22),transparent_48%)]"
           aria-hidden
         />
         <div className="relative mx-auto max-w-6xl px-5 md:px-8">
@@ -549,7 +508,7 @@ export default function HomePage() {
       {/* Free topics */}
       <section className="border-y border-line bg-mist/70 py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-ink via-forest to-[#147a55] p-7 text-white md:p-10">
+          <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-night via-[#2a0a3c] to-violet p-7 text-white md:p-10">
             <div className="grid gap-10 md:grid-cols-[1fr_1.05fr] md:items-center">
               <div>
                 <p className="text-sm font-semibold tracking-wide text-teal-bright uppercase">
@@ -704,7 +663,7 @@ export default function HomePage() {
       {/* Comparison */}
       <section className="bg-paper py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <h2 className="font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-ink md:text-4xl">
             SmartZno vs репетитор vs самостійно
           </h2>
           <div className="mt-8 overflow-hidden overflow-x-auto rounded-2xl border border-line bg-white">
@@ -753,7 +712,7 @@ export default function HomePage() {
       {/* FAQ */}
       <section id="faq" className="bg-paper py-16 md:py-24">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <h2 className="font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-ink md:text-4xl">
             Часті питання
           </h2>
           <div className="mt-8 space-y-3">
@@ -778,17 +737,21 @@ export default function HomePage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="relative overflow-hidden py-16 text-white md:py-24">
+      <section className="relative overflow-hidden bg-night py-16 text-white md:py-24">
         <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_10%_0%,rgba(240,164,26,0.18)_0%,transparent_40%),linear-gradient(145deg,#02140f,#0b3d30_55%,#14966a)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(192,38,211,0.32),transparent_52%)]"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(245,197,24,0.14),transparent_46%)]"
           aria-hidden
         />
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 md:grid-cols-2 md:px-8">
           <div>
-            <h2 className="font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight md:text-4xl">
+            <h2 className="font-[family-name:var(--font-display)] text-3xl font-semibold tracking-tight text-white md:text-4xl">
               Почніть з діагностики — не з «купити одразу»
             </h2>
-            <p className="mt-4 max-w-md text-white/65">
+            <p className="mt-4 max-w-md text-base leading-relaxed text-white/75">
               Заявка або короткий тест у кабінеті. Підкажемо потік під ваш рівень і відповімо в
               Telegram.
             </p>
@@ -803,15 +766,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="border-t border-line bg-ink py-12 text-white">
+      <footer className="border-t border-white/10 bg-night py-12 text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 md:flex-row md:items-start md:justify-between md:px-8">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-teal text-sm font-extrabold text-ink">
-                SZ
-              </span>
-              <p className="font-[family-name:var(--font-display)] text-lg font-semibold">SmartZno</p>
-            </div>
+            <BrandLogo size="footer" />
             <p className="mt-3 max-w-xs text-sm text-white/45">
               Онлайн-підготовка до НМТ для 9–11 класів. Europe/Kyiv.
             </p>
