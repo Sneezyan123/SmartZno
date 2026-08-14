@@ -4,11 +4,11 @@
 
 Окремий репозиторій. Sibling-проєкти:
 
-| Репо | Шлях | Порт |
+| Репо | GitHub | Порт |
 |---|---|---|
-| **SmartZno Land** (цей) | `E:\smartzno` | 3000 |
-| **SmartZno Manager** | `E:\smartzno-manager` | 3001 |
-| **SmartManager** API | `E:\smartmanager` | 8000 |
+| **SmartZno Land** (цей) | [Sneezyan123/SmartZno](https://github.com/Sneezyan123/SmartZno) | 3000 |
+| **SmartZno Manager** (CRM) | [Sneezyan123/SmartZno_Manager](https://github.com/Sneezyan123/SmartZno_Manager) | 3001 |
+| **SmartManager** API | sibling `smartmanager-backend` | 8000 |
 
 Повний brief: [SMARTZNO_ECOSYSTEM_PROMPT.md](./SMARTZNO_ECOSYSTEM_PROMPT.md)
 
