@@ -84,9 +84,9 @@ export default function CabinetPage() {
 
   return (
     <main className="min-h-screen bg-paper">
-      <header className="border-b border-line bg-white/70 backdrop-blur">
+      <header className="border-b border-white/10 bg-night/80 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-5">
-          <Link href="/" className="font-[family-name:var(--font-display)] text-lg font-semibold text-forest">
+          <Link href="/" className="font-[family-name:var(--font-display)] text-lg font-semibold text-white">
             SmartZno
           </Link>
           <div className="flex items-center gap-4 text-sm">
@@ -192,12 +192,12 @@ export default function CabinetPage() {
             <li>
               <Link
                 href="/cabinet/courses/math"
-                className="flex items-center justify-between rounded-[var(--radius-sm)] border border-line bg-white px-4 py-4 transition hover:border-teal/40"
+                className="flex items-center justify-between rounded-[var(--radius-sm)] border border-line bg-surface px-4 py-4 transition hover:border-teal/40"
               >
                 <div>
                   <p className="font-semibold text-ink">НМТ Математика 2027</p>
                   <p className="mt-1 text-sm text-forest/60">
-                    Теорія · квізкарти · завдання після уроків
+                    Теорія · картки · ДЗ · план тижня · пробні 60 хв
                   </p>
                 </div>
                 <span className="text-teal">→</span>
@@ -211,15 +211,27 @@ export default function CabinetPage() {
           <div className="mt-4 flex flex-wrap gap-3">
             <Link
               href="/cabinet/courses/math"
-              className="rounded-full bg-forest px-5 py-2.5 text-sm font-semibold text-white"
+              className="rounded-full bg-violet px-5 py-2.5 text-sm font-semibold text-white"
             >
               Відкрити курс математики
             </Link>
             <Link
-              href="/diagnostic"
+              href="/cabinet/courses/math/placement"
               className="rounded-full border border-forest/25 px-5 py-2.5 text-sm font-semibold text-forest"
             >
-              Нова діагностика
+              Діагностика старту
+            </Link>
+            <Link
+              href="/cabinet/courses/math/plan"
+              className="rounded-full border border-forest/25 px-5 py-2.5 text-sm font-semibold text-forest"
+            >
+              План тижня
+            </Link>
+            <Link
+              href="/cabinet/courses/math/parent"
+              className="rounded-full border border-forest/25 px-5 py-2.5 text-sm font-semibold text-forest"
+            >
+              Звіт батькам
             </Link>
             <Link
               href="/#pricing"

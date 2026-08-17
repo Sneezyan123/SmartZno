@@ -11,7 +11,7 @@ const display = Unbounded({
 const sans = Manrope({
   variable: "--font-sans",
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -26,8 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="uk">
-      <body className={`${display.variable} ${sans.variable} antialiased`}>{children}</body>
+    <html lang="uk" className="bg-night">
+      <body className={`${display.variable} ${sans.variable} bg-night text-ink antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

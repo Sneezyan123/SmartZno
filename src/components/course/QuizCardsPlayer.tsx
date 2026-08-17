@@ -48,7 +48,7 @@ export function QuizCardsPlayer({ lessonId, cards }: { lessonId: string; cards: 
       <button
         type="button"
         onClick={flip}
-        className="group relative w-full min-h-[220px] rounded-[var(--radius)] border border-line bg-white p-8 text-left shadow-[var(--shadow-soft)] transition hover:border-teal/40"
+        className="group relative w-full min-h-[220px] rounded-[var(--radius)] border border-line bg-surface p-8 text-left shadow-[var(--shadow-soft)] transition hover:border-teal/40"
       >
         <span className="text-xs font-semibold uppercase tracking-wide text-teal">
           {flipped ? "Відповідь" : "Питання"} · натисни, щоб перевернути
@@ -72,7 +72,7 @@ export function QuizCardsPlayer({ lessonId, cards }: { lessonId: string; cards: 
         <button
           type="button"
           onClick={() => go(1)}
-          className="rounded-full bg-forest px-5 py-2.5 text-sm font-semibold text-white"
+          className="rounded-full bg-violet px-5 py-2.5 text-sm font-semibold text-white"
         >
           Далі
         </button>

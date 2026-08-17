@@ -63,7 +63,7 @@ export default function DiagnosticPage() {
         recommended_track: score >= 120 ? "standard" : "foundation",
         offer_segment: score >= 120 ? "standard_cohort" : "demo_then_standard",
       });
-      setError("API недоступне — показано локальний розрахунок. Запустіть SmartManager на :8000.");
+      setError("API недоступне — показано локальний розрахунок.");
     } finally {
       setLoading(false);
     }
@@ -73,7 +73,7 @@ export default function DiagnosticPage() {
     <main className="min-h-screen bg-paper">
       <header className="border-b border-line">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-5">
-          <Link href="/" className="font-[family-name:var(--font-display)] text-lg font-semibold text-forest">
+          <Link href="/" className="font-[family-name:var(--font-display)] text-lg font-semibold text-white">
             SmartZno
           </Link>
           <div className="flex items-center gap-4 text-sm">
@@ -123,7 +123,7 @@ export default function DiagnosticPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/cabinet/register"
-                className="rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white"
+                className="rounded-full bg-violet px-5 py-3 text-sm font-semibold text-white"
               >
                 Створити кабінет учня
               </Link>
@@ -157,7 +157,7 @@ export default function DiagnosticPage() {
                     onClick={() => setSubject(s.id)}
                     className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                       subject === s.id
-                        ? "bg-forest text-white"
+                        ? "bg-violet text-white"
                         : "border border-line text-forest hover:border-forest/40"
                     }`}
                   >
@@ -174,7 +174,7 @@ export default function DiagnosticPage() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Марія"
-                  className="mt-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 outline-none focus:border-teal"
+                  className="field mt-2 px-3 py-2.5"
                 />
               </label>
               <label className="block text-sm">
@@ -182,7 +182,7 @@ export default function DiagnosticPage() {
                 <select
                   value={grade}
                   onChange={(e) => setGrade(e.target.value)}
-                  className="mt-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 outline-none focus:border-teal"
+                  className="field mt-2 px-3 py-2.5"
                 >
                   <option value="9">9</option>
                   <option value="10">10</option>
@@ -196,7 +196,7 @@ export default function DiagnosticPage() {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="+380..."
-                  className="mt-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 outline-none focus:border-teal"
+                  className="field mt-2 px-3 py-2.5"
                 />
               </label>
             </div>
@@ -224,7 +224,7 @@ export default function DiagnosticPage() {
                         type="button"
                         onClick={() => setAnswers((a) => ({ ...a, [q.id]: false }))}
                         className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                          answers[q.id] === false ? "bg-ink text-white" : "border border-line"
+                          answers[q.id] === false ? "bg-night text-white ring-1 ring-white/20" : "border border-line"
                         }`}
                       >
                         Ні
@@ -251,7 +251,7 @@ export default function DiagnosticPage() {
             <button
               type="submit"
               disabled={loading || Object.keys(answers).length < QUESTIONS.length}
-              className="rounded-full bg-amber px-6 py-3 text-sm font-semibold text-ink transition enabled:hover:brightness-110 disabled:opacity-50"
+              className="rounded-full bg-amber px-6 py-3 text-sm font-semibold text-night transition enabled:hover:brightness-110 disabled:opacity-50"
             >
               {loading ? "Рахуємо…" : "Отримати результат і залишити заявку"}
             </button>

@@ -39,6 +39,10 @@
     {
       "type": "tip",
       "content": "Чернетку в реальному НМТ не перевіряють. Тут теж рахується лише вибрана/введена відповідь."
+    },
+    {
+      "type": "tip",
+      "content": "Після перевірки відкрий «Роботу над помилками»: кожне завдання веде на урок-тег."
     }
   ],
   "quizCards": [
@@ -101,6 +105,26 @@
       "id": "m7-common-c12",
       "front": "Повтор",
       "back": "другий варіант через кілька днів"
+    },
+    {
+      "id": "m7-01-c13",
+      "front": "Таймер",
+      "back": "60 хв як на НМТ"
+    },
+    {
+      "id": "m7-01-c14",
+      "front": "Довідка",
+      "back": "формули видають"
+    },
+    {
+      "id": "m7-01-c15",
+      "front": "Чернетка",
+      "back": "не перевіряють"
+    },
+    {
+      "id": "m7-01-c16",
+      "front": "Макс тестових",
+      "back": "32"
     }
   ],
   "homework": [
@@ -131,7 +155,8 @@
         }
       ],
       "answer": "А",
-      "explanation": "2^(3+2)=2^5=32."
+      "explanation": "2^(3+2)=2^5=32.",
+      "reviewLessonId": "m1-04"
     },
     {
       "id": "m7-01-h02",
@@ -160,7 +185,8 @@
         }
       ],
       "answer": "В",
-      "explanation": "x=2."
+      "explanation": "x=2.",
+      "reviewLessonId": "m2-01"
     },
     {
       "id": "m7-01-h03",
@@ -189,7 +215,8 @@
         }
       ],
       "answer": "А",
-      "explanation": "16−12=4."
+      "explanation": "16−12=4.",
+      "reviewLessonId": "m2-02"
     },
     {
       "id": "m7-01-h04",
@@ -218,7 +245,8 @@
         }
       ],
       "answer": "В",
-      "explanation": "16."
+      "explanation": "16.",
+      "reviewLessonId": "m1-03"
     },
     {
       "id": "m7-01-h05",
@@ -247,7 +275,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "Основна тотожність."
+      "explanation": "Основна тотожність.",
+      "reviewLessonId": "m1-11"
     },
     {
       "id": "m7-01-h06",
@@ -276,7 +305,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "6."
+      "explanation": "6.",
+      "reviewLessonId": "m1-01"
     },
     {
       "id": "m7-01-h07",
@@ -305,7 +335,8 @@
         }
       ],
       "answer": "В",
-      "explanation": "30."
+      "explanation": "30.",
+      "reviewLessonId": "m5-01"
     },
     {
       "id": "m7-01-h08",
@@ -334,7 +365,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "2³=8."
+      "explanation": "2³=8.",
+      "reviewLessonId": "m1-10"
     },
     {
       "id": "m7-01-h09",
@@ -363,7 +395,8 @@
         }
       ],
       "answer": "Г",
-      "explanation": "64."
+      "explanation": "64.",
+      "reviewLessonId": "m6-03"
     },
     {
       "id": "m7-01-h10",
@@ -392,7 +425,8 @@
         }
       ],
       "answer": "В",
-      "explanation": "3/6=1/2."
+      "explanation": "3/6=1/2.",
+      "reviewLessonId": "m4-03"
     },
     {
       "id": "m7-01-h11",
@@ -421,7 +455,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "3+8=11."
+      "explanation": "3+8=11.",
+      "reviewLessonId": "m3-07"
     },
     {
       "id": "m7-01-h12",
@@ -450,7 +485,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "Арифметичний корінь 7."
+      "explanation": "Арифметичний корінь 7.",
+      "reviewLessonId": "m1-08"
     },
     {
       "id": "m7-01-h13",
@@ -479,7 +515,8 @@
         }
       ],
       "answer": "В",
-      "explanation": "9π."
+      "explanation": "9π.",
+      "reviewLessonId": "m5-05"
     },
     {
       "id": "m7-01-h14",
@@ -508,7 +545,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "2x."
+      "explanation": "2x.",
+      "reviewLessonId": "m2-02"
     },
     {
       "id": "m7-01-h15",
@@ -537,7 +575,8 @@
         }
       ],
       "answer": "А",
-      "explanation": "25+144=169."
+      "explanation": "25+144=169.",
+      "reviewLessonId": "m5-03"
     },
     {
       "id": "m7-01-h16",
@@ -584,7 +623,8 @@
         "2": "Б",
         "3": "В"
       },
-      "explanation": "2; 1/2; 4."
+      "explanation": "2; 1/2; 4.",
+      "reviewLessonId": "m1-01"
     },
     {
       "id": "m7-01-h17",
@@ -631,7 +671,8 @@
         "2": "Б",
         "3": "В"
       },
-      "explanation": "12; 24; 20."
+      "explanation": "12; 24; 20.",
+      "reviewLessonId": "m5-05"
     },
     {
       "id": "m7-01-h18",
@@ -678,35 +719,42 @@
         "2": "Б",
         "3": "В"
       },
-      "explanation": "8; ⅓·9·4=12; π·1·1 → 1."
+      "explanation": "8; ⅓·9·4=12; π·1·1 → 1.",
+      "reviewLessonId": "m1-01"
     },
     {
       "id": "m7-01-h19",
       "type": "open",
       "prompt": "Корінь 2x+7=15:",
       "answer": "4",
-      "explanation": "2x=8."
+      "explanation": "2x=8.",
+      "reviewLessonId": "m1-01"
     },
     {
       "id": "m7-01-h20",
       "type": "open",
       "prompt": "Більший корінь x²−5x+6=0:",
       "answer": "3",
-      "explanation": "2 і 3."
+      "explanation": "2 і 3.",
+      "reviewLessonId": "m2-02"
     },
     {
       "id": "m7-01-h21",
       "type": "open",
       "prompt": "S трикутника зі сторонами 6, 8 і кутом 90° між ними:",
       "answer": "24",
-      "explanation": "½·6·8=24."
+      "explanation": "½·6·8=24.",
+      "reviewLessonId": "m5-01"
     },
     {
       "id": "m7-01-h22",
       "type": "open",
       "prompt": "C_5^2 =",
       "answer": "10",
-      "explanation": "10."
+      "explanation": "10.",
+      "reviewLessonId": "m4-02"
     }
-  ]
+  ],
+  "liveTopic": "4 задачі з теми «Пробний НМТ №1» + розбір типових помилок ДЗ",
+  "videoUrl": null
 }

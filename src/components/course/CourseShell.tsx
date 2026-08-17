@@ -38,13 +38,13 @@ export function CourseHeader({
   backLabel?: string;
 }) {
   return (
-    <header className="border-b border-line bg-white/70 backdrop-blur">
+    <header className="border-b border-white/10 bg-night/80 backdrop-blur">
       <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-5 py-5">
         <div>
           <Link href={backHref} className="text-sm text-teal hover:underline">
             ← {backLabel}
           </Link>
-          <h1 className="mt-1 font-[family-name:var(--font-display)] text-lg font-semibold text-forest md:text-xl">
+          <h1 className="mt-1 font-[family-name:var(--font-display)] text-lg font-semibold text-white md:text-xl">
             {title}
           </h1>
         </div>
@@ -77,7 +77,7 @@ export function LessonNav({
           href={item.href}
           className={`rounded-full px-4 py-2 text-sm font-semibold ${
             active === item.id
-              ? "bg-forest text-white"
+              ? "bg-violet text-white"
               : "border border-forest/20 text-forest hover:border-teal"
           }`}
         >

@@ -1,0 +1,1181 @@
+{
+  "version": 1,
+  "levels": [
+    {
+      "id": "C",
+      "name": "Фундамент",
+      "target": "Поріг і підтягнути 7–9 клас",
+      "score": "140–160"
+    },
+    {
+      "id": "B",
+      "name": "Стандарт",
+      "target": "Впевнений бал",
+      "score": "160–185"
+    },
+    {
+      "id": "A",
+      "name": "Максимум",
+      "target": "190–200",
+      "score": "190–200"
+    }
+  ],
+  "defaultTrackId": "g11-9",
+  "tracks": [
+    {
+      "id": "g10-18",
+      "name": "10 клас · 18 місяців",
+      "shortName": "10 клас",
+      "grade": 10,
+      "months": 18,
+      "livesPerWeek": 2,
+      "hwDeadlinesPerWeek": 2,
+      "cardsSlotsPerWeek": 1,
+      "lessonsPerWeek": 2,
+      "maxLtv": true,
+      "goal": "Звичка + два сезони оплати. Рік 1: фундамент M1–M2 і базова планіметрія. Літо: прогалини. Рік 2: функції, стереометрія, імовірність, щомісячні mock.",
+      "demoLessons": [
+        "m1-01",
+        "m1-02"
+      ],
+      "sequence": [
+        "m0-intro",
+        "m0-formulas",
+        "m0-strategy",
+        "m1-01",
+        "m1-02",
+        "m1-03",
+        "m1-04",
+        "m1-05",
+        "m1-06",
+        "m1-07",
+        "m1-08",
+        "m1-09",
+        "m5-01",
+        "m1-10",
+        "m1-11",
+        "m5-02",
+        "m2-01",
+        "m2-02",
+        "m5-03",
+        "m2-03",
+        "m2-04",
+        "m5-04",
+        "m2-05",
+        "m2-06",
+        "m5-05",
+        "m2-07",
+        "m2-08",
+        "m2-09",
+        "m2-10",
+        "m2-11",
+        "m2-12",
+        "m2-13",
+        "m3-01",
+        "m3-02",
+        "m3-03",
+        "m3-04",
+        "m3-05",
+        "m3-06",
+        "m3-07",
+        "m3-08",
+        "m3-09",
+        "m3-10",
+        "m3-11",
+        "m4-01",
+        "m4-02",
+        "m4-03",
+        "m4-04",
+        "m6-01",
+        "m6-02",
+        "m6-03",
+        "m6-04",
+        "m6-05",
+        "m6-06",
+        "m5-06",
+        "m5-07",
+        "m5-08",
+        "m5-09"
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "lessons": [
+            "m0-intro",
+            "m0-formulas"
+          ],
+          "liveFocus": "m0-intro",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 2,
+          "lessons": [
+            "m0-strategy",
+            "m1-01"
+          ],
+          "liveFocus": "m0-strategy",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 3,
+          "lessons": [
+            "m1-02",
+            "m1-03"
+          ],
+          "liveFocus": "m1-02",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 4,
+          "lessons": [
+            "m1-04",
+            "m1-05"
+          ],
+          "liveFocus": "m1-04",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-01"
+        },
+        {
+          "week": 5,
+          "lessons": [
+            "m1-06",
+            "m1-07"
+          ],
+          "liveFocus": "m1-06",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 6,
+          "lessons": [
+            "m1-08",
+            "m1-09"
+          ],
+          "liveFocus": "m1-08",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 7,
+          "lessons": [
+            "m5-01",
+            "m1-10"
+          ],
+          "liveFocus": "m5-01",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 8,
+          "lessons": [
+            "m1-11",
+            "m5-02"
+          ],
+          "liveFocus": "m1-11",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-02"
+        },
+        {
+          "week": 9,
+          "lessons": [
+            "m2-01",
+            "m2-02"
+          ],
+          "liveFocus": "m2-01",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 10,
+          "lessons": [
+            "m5-03",
+            "m2-03"
+          ],
+          "liveFocus": "m5-03",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 11,
+          "lessons": [
+            "m2-04",
+            "m5-04"
+          ],
+          "liveFocus": "m2-04",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 12,
+          "lessons": [
+            "m2-05",
+            "m2-06"
+          ],
+          "liveFocus": "m2-05",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-03"
+        },
+        {
+          "week": 13,
+          "lessons": [
+            "m5-05",
+            "m2-07"
+          ],
+          "liveFocus": "m5-05",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 14,
+          "lessons": [
+            "m2-08",
+            "m2-09"
+          ],
+          "liveFocus": "m2-08",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 15,
+          "lessons": [
+            "m2-10",
+            "m2-11"
+          ],
+          "liveFocus": "m2-10",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 16,
+          "lessons": [
+            "m2-12",
+            "m2-13"
+          ],
+          "liveFocus": "m2-12",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-04"
+        },
+        {
+          "week": 17,
+          "lessons": [
+            "m3-01",
+            "m3-02"
+          ],
+          "liveFocus": "m3-01",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 18,
+          "lessons": [
+            "m3-03",
+            "m3-04"
+          ],
+          "liveFocus": "m3-03",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 19,
+          "lessons": [
+            "m3-05",
+            "m3-06"
+          ],
+          "liveFocus": "m3-05",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 20,
+          "lessons": [
+            "m3-07",
+            "m3-08"
+          ],
+          "liveFocus": "m3-07",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-05"
+        },
+        {
+          "week": 21,
+          "lessons": [
+            "m3-09",
+            "m3-10"
+          ],
+          "liveFocus": "m3-09",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 22,
+          "lessons": [
+            "m3-11",
+            "m4-01"
+          ],
+          "liveFocus": "m3-11",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 23,
+          "lessons": [
+            "m4-02",
+            "m4-03"
+          ],
+          "liveFocus": "m4-02",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 24,
+          "lessons": [
+            "m4-04",
+            "m6-01"
+          ],
+          "liveFocus": "m4-04",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-06"
+        },
+        {
+          "week": 25,
+          "lessons": [
+            "m6-02",
+            "m6-03"
+          ],
+          "liveFocus": "m6-02",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 26,
+          "lessons": [
+            "m6-04",
+            "m6-05"
+          ],
+          "liveFocus": "m6-04",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 27,
+          "lessons": [
+            "m6-06",
+            "m5-06"
+          ],
+          "liveFocus": "m6-06",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 28,
+          "lessons": [
+            "m5-07",
+            "m5-08"
+          ],
+          "liveFocus": "m5-07",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-07"
+        },
+        {
+          "week": 29,
+          "lessons": [
+            "m5-09"
+          ],
+          "liveFocus": "m5-09",
+          "hwDeadlines": 1,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 30,
+          "lessons": [],
+          "liveFocus": "m7-08",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-08"
+        }
+      ]
+    },
+    {
+      "id": "g11-9",
+      "name": "11 клас · 9 місяців",
+      "shortName": "11 · 9 міс",
+      "grade": 11,
+      "months": 9,
+      "livesPerWeek": 2,
+      "hwDeadlinesPerWeek": 2,
+      "cardsSlotsPerWeek": 1,
+      "lessonsPerWeek": 3,
+      "coreMrr": true,
+      "goal": "Серпень/вересень → травень: повне покриття програми + 8–10 пробних.",
+      "demoLessons": [
+        "m1-01",
+        "m1-02"
+      ],
+      "sequence": [
+        "m0-intro",
+        "m0-formulas",
+        "m0-strategy",
+        "m1-01",
+        "m1-02",
+        "m1-03",
+        "m1-04",
+        "m1-05",
+        "m1-06",
+        "m1-07",
+        "m5-01",
+        "m1-08",
+        "m1-09",
+        "m5-02",
+        "m1-10",
+        "m1-11",
+        "m5-03",
+        "m2-01",
+        "m2-02",
+        "m5-04",
+        "m2-03",
+        "m2-04",
+        "m5-05",
+        "m2-05",
+        "m2-06",
+        "m5-06",
+        "m2-07",
+        "m2-08",
+        "m5-07",
+        "m2-09",
+        "m2-10",
+        "m5-08",
+        "m2-11",
+        "m2-12",
+        "m5-09",
+        "m2-13",
+        "m3-01",
+        "m3-02",
+        "m3-03",
+        "m3-04",
+        "m3-05",
+        "m3-06",
+        "m3-07",
+        "m3-08",
+        "m3-09",
+        "m3-10",
+        "m3-11",
+        "m4-01",
+        "m4-02",
+        "m4-03",
+        "m4-04",
+        "m6-01",
+        "m6-02",
+        "m6-03",
+        "m6-04",
+        "m6-05",
+        "m6-06"
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "lessons": [
+            "m0-intro",
+            "m0-formulas",
+            "m0-strategy"
+          ],
+          "liveFocus": "m0-intro",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 2,
+          "lessons": [
+            "m1-01",
+            "m1-02",
+            "m1-03"
+          ],
+          "liveFocus": "m1-01",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 3,
+          "lessons": [
+            "m1-04",
+            "m1-05",
+            "m1-06"
+          ],
+          "liveFocus": "m1-04",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 4,
+          "lessons": [
+            "m1-07",
+            "m5-01",
+            "m1-08"
+          ],
+          "liveFocus": "m1-07",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-01"
+        },
+        {
+          "week": 5,
+          "lessons": [
+            "m1-09",
+            "m5-02",
+            "m1-10"
+          ],
+          "liveFocus": "m1-09",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 6,
+          "lessons": [
+            "m1-11",
+            "m5-03",
+            "m2-01"
+          ],
+          "liveFocus": "m1-11",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 7,
+          "lessons": [
+            "m2-02",
+            "m5-04",
+            "m2-03"
+          ],
+          "liveFocus": "m2-02",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 8,
+          "lessons": [
+            "m2-04",
+            "m5-05",
+            "m2-05"
+          ],
+          "liveFocus": "m2-04",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-02"
+        },
+        {
+          "week": 9,
+          "lessons": [
+            "m2-06",
+            "m5-06",
+            "m2-07"
+          ],
+          "liveFocus": "m2-06",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 10,
+          "lessons": [
+            "m2-08",
+            "m5-07",
+            "m2-09"
+          ],
+          "liveFocus": "m2-08",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 11,
+          "lessons": [
+            "m2-10",
+            "m5-08",
+            "m2-11"
+          ],
+          "liveFocus": "m2-10",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 12,
+          "lessons": [
+            "m2-12",
+            "m5-09",
+            "m2-13"
+          ],
+          "liveFocus": "m2-12",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-03"
+        },
+        {
+          "week": 13,
+          "lessons": [
+            "m3-01",
+            "m3-02",
+            "m3-03"
+          ],
+          "liveFocus": "m3-01",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 14,
+          "lessons": [
+            "m3-04",
+            "m3-05",
+            "m3-06"
+          ],
+          "liveFocus": "m3-04",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 15,
+          "lessons": [
+            "m3-07",
+            "m3-08",
+            "m3-09"
+          ],
+          "liveFocus": "m3-07",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 16,
+          "lessons": [
+            "m3-10",
+            "m3-11",
+            "m4-01"
+          ],
+          "liveFocus": "m3-10",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-04"
+        },
+        {
+          "week": 17,
+          "lessons": [
+            "m4-02",
+            "m4-03",
+            "m4-04"
+          ],
+          "liveFocus": "m4-02",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 18,
+          "lessons": [
+            "m6-01",
+            "m6-02",
+            "m6-03"
+          ],
+          "liveFocus": "m6-01",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 19,
+          "lessons": [
+            "m6-04",
+            "m6-05",
+            "m6-06"
+          ],
+          "liveFocus": "m6-04",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 20,
+          "lessons": [],
+          "liveFocus": "m7-05",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-05"
+        },
+        {
+          "week": 21,
+          "lessons": [],
+          "liveFocus": "m7-06",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-06"
+        },
+        {
+          "week": 22,
+          "lessons": [],
+          "liveFocus": "m7-07",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-07"
+        },
+        {
+          "week": 23,
+          "lessons": [],
+          "liveFocus": "m7-08",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-08"
+        }
+      ]
+    },
+    {
+      "id": "g11-6",
+      "name": "11 клас · 6 місяців",
+      "shortName": "11 · 6 міс",
+      "grade": 11,
+      "months": 6,
+      "livesPerWeek": 2,
+      "hwDeadlinesPerWeek": 2,
+      "cardsSlotsPerWeek": 1,
+      "lessonsPerWeek": 4,
+      "intensive": true,
+      "goal": "Той самий контент, щільніший календар, акцент на патернах НМТ.",
+      "demoLessons": [
+        "m1-01",
+        "m1-02"
+      ],
+      "sequence": [
+        "m0-intro",
+        "m0-formulas",
+        "m1-05",
+        "m1-06",
+        "m1-07",
+        "m5-01",
+        "m1-08",
+        "m1-09",
+        "m5-02",
+        "m1-10",
+        "m1-11",
+        "m5-03",
+        "m2-01",
+        "m2-02",
+        "m5-04",
+        "m2-03",
+        "m2-04",
+        "m5-05",
+        "m2-05",
+        "m2-06",
+        "m5-06",
+        "m2-07",
+        "m2-08",
+        "m5-07",
+        "m2-09",
+        "m2-10",
+        "m5-08",
+        "m2-11",
+        "m2-12",
+        "m5-09",
+        "m2-13",
+        "m3-01",
+        "m3-02",
+        "m3-03",
+        "m3-04",
+        "m3-05",
+        "m3-06",
+        "m3-07",
+        "m3-08",
+        "m3-09",
+        "m3-10",
+        "m3-11",
+        "m4-01",
+        "m4-02",
+        "m4-03",
+        "m4-04",
+        "m6-01",
+        "m6-02",
+        "m6-03",
+        "m6-04",
+        "m6-05",
+        "m6-06"
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "lessons": [
+            "m0-intro",
+            "m0-formulas",
+            "m1-05",
+            "m1-06"
+          ],
+          "liveFocus": "m0-intro",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 2,
+          "lessons": [
+            "m1-07",
+            "m5-01",
+            "m1-08",
+            "m1-09"
+          ],
+          "liveFocus": "m1-07",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 3,
+          "lessons": [
+            "m5-02",
+            "m1-10",
+            "m1-11",
+            "m5-03"
+          ],
+          "liveFocus": "m5-02",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-01"
+        },
+        {
+          "week": 4,
+          "lessons": [
+            "m2-01",
+            "m2-02",
+            "m5-04",
+            "m2-03"
+          ],
+          "liveFocus": "m2-01",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 5,
+          "lessons": [
+            "m2-04",
+            "m5-05",
+            "m2-05",
+            "m2-06"
+          ],
+          "liveFocus": "m2-04",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 6,
+          "lessons": [
+            "m5-06",
+            "m2-07",
+            "m2-08",
+            "m5-07"
+          ],
+          "liveFocus": "m5-06",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-02"
+        },
+        {
+          "week": 7,
+          "lessons": [
+            "m2-09",
+            "m2-10",
+            "m5-08",
+            "m2-11"
+          ],
+          "liveFocus": "m2-09",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 8,
+          "lessons": [
+            "m2-12",
+            "m5-09",
+            "m2-13",
+            "m3-01"
+          ],
+          "liveFocus": "m2-12",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 9,
+          "lessons": [
+            "m3-02",
+            "m3-03",
+            "m3-04",
+            "m3-05"
+          ],
+          "liveFocus": "m3-02",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-03"
+        },
+        {
+          "week": 10,
+          "lessons": [
+            "m3-06",
+            "m3-07",
+            "m3-08",
+            "m3-09"
+          ],
+          "liveFocus": "m3-06",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 11,
+          "lessons": [
+            "m3-10",
+            "m3-11",
+            "m4-01",
+            "m4-02"
+          ],
+          "liveFocus": "m3-10",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 12,
+          "lessons": [
+            "m4-03",
+            "m4-04",
+            "m6-01",
+            "m6-02"
+          ],
+          "liveFocus": "m4-03",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-04"
+        },
+        {
+          "week": 13,
+          "lessons": [
+            "m6-03",
+            "m6-04",
+            "m6-05",
+            "m6-06"
+          ],
+          "liveFocus": "m6-03",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 14,
+          "lessons": [],
+          "liveFocus": "m7-05",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-05"
+        },
+        {
+          "week": 15,
+          "lessons": [],
+          "liveFocus": "m7-06",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-06"
+        },
+        {
+          "week": 16,
+          "lessons": [],
+          "liveFocus": "m7-07",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-07"
+        },
+        {
+          "week": 17,
+          "lessons": [],
+          "liveFocus": "m7-08",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-08"
+        }
+      ]
+    },
+    {
+      "id": "retake-3",
+      "name": "Перескладання · 3 місяці",
+      "shortName": "Перескладання",
+      "grade": 11,
+      "months": 3,
+      "livesPerWeek": 2,
+      "hwDeadlinesPerWeek": 2,
+      "cardsSlotsPerWeek": 1,
+      "lessonsPerWeek": 4,
+      "retake": true,
+      "goal": "Не лінійний курс з уроку 1: слабкі розділи після діагностики + mock щотижня.",
+      "demoLessons": [
+        "m0-strategy"
+      ],
+      "sequence": [
+        "m1-01",
+        "m1-02",
+        "m1-03",
+        "m2-01",
+        "m2-02",
+        "m2-03",
+        "m2-04",
+        "m5-01",
+        "m5-02",
+        "m5-03",
+        "m3-09",
+        "m3-10",
+        "m3-11",
+        "m6-01",
+        "m6-02",
+        "m4-03",
+        "m4-04"
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "lessons": [
+            "m1-01",
+            "m1-02",
+            "m1-03",
+            "m2-01"
+          ],
+          "liveFocus": "m1-01",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 2,
+          "lessons": [
+            "m2-02",
+            "m2-03",
+            "m2-04",
+            "m5-01"
+          ],
+          "liveFocus": "m2-02",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-01"
+        },
+        {
+          "week": 3,
+          "lessons": [
+            "m5-02",
+            "m5-03",
+            "m3-09",
+            "m3-10"
+          ],
+          "liveFocus": "m5-02",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": null
+        },
+        {
+          "week": 4,
+          "lessons": [
+            "m3-11",
+            "m6-01",
+            "m6-02",
+            "m4-03"
+          ],
+          "liveFocus": "m3-11",
+          "hwDeadlines": 2,
+          "cardsSlot": true,
+          "mock": "m7-02"
+        },
+        {
+          "week": 5,
+          "lessons": [
+            "m4-04"
+          ],
+          "liveFocus": "m4-04",
+          "hwDeadlines": 1,
+          "cardsSlot": true,
+          "mock": "m7-03"
+        },
+        {
+          "week": 6,
+          "lessons": [],
+          "liveFocus": "m7-04",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-04"
+        },
+        {
+          "week": 7,
+          "lessons": [],
+          "liveFocus": "m7-05",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-05"
+        },
+        {
+          "week": 8,
+          "lessons": [],
+          "liveFocus": "m7-06",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-06"
+        },
+        {
+          "week": 9,
+          "lessons": [],
+          "liveFocus": "m7-07",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-07"
+        },
+        {
+          "week": 10,
+          "lessons": [],
+          "liveFocus": "m7-08",
+          "hwDeadlines": 1,
+          "cardsSlot": false,
+          "mock": "m7-08"
+        }
+      ]
+    }
+  ]
+}

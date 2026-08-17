@@ -43,6 +43,10 @@
     {
       "type": "paragraph",
       "content": "Це другий варіант. Бажано писати його після розбору №1 і повторення 2–3 слабких уроків."
+    },
+    {
+      "type": "tip",
+      "content": "Після перевірки відкрий «Роботу над помилками»: кожне завдання веде на урок-тег."
     }
   ],
   "quizCards": [
@@ -105,6 +109,26 @@
       "id": "m7-common-c12",
       "front": "Повтор",
       "back": "другий варіант через кілька днів"
+    },
+    {
+      "id": "m7-02-c13",
+      "front": "Таймер",
+      "back": "60 хв як на НМТ"
+    },
+    {
+      "id": "m7-02-c14",
+      "front": "Довідка",
+      "back": "формули видають"
+    },
+    {
+      "id": "m7-02-c15",
+      "front": "Чернетка",
+      "back": "не перевіряють"
+    },
+    {
+      "id": "m7-02-c16",
+      "front": "Макс тестових",
+      "back": "32"
     }
   ],
   "homework": [
@@ -135,7 +159,8 @@
         }
       ],
       "answer": "В",
-      "explanation": "4ab."
+      "explanation": "4ab.",
+      "reviewLessonId": "m1-01"
     },
     {
       "id": "m7-02-h02",
@@ -164,7 +189,8 @@
         }
       ],
       "answer": "В",
-      "explanation": "±5."
+      "explanation": "±5.",
+      "reviewLessonId": "m1-08"
     },
     {
       "id": "m7-02-h03",
@@ -193,7 +219,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "3³=27."
+      "explanation": "3³=27.",
+      "reviewLessonId": "m1-01"
     },
     {
       "id": "m7-02-h04",
@@ -222,7 +249,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "Нахил −2."
+      "explanation": "Нахил −2.",
+      "reviewLessonId": "m5-08"
     },
     {
       "id": "m7-02-h05",
@@ -251,7 +279,8 @@
         }
       ],
       "answer": "В",
-      "explanation": "Поза відрізком."
+      "explanation": "Поза відрізком.",
+      "reviewLessonId": "m2-02"
     },
     {
       "id": "m7-02-h06",
@@ -280,7 +309,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "1."
+      "explanation": "1.",
+      "reviewLessonId": "m1-11"
     },
     {
       "id": "m7-02-h07",
@@ -309,7 +339,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "18/3=6."
+      "explanation": "18/3=6.",
+      "reviewLessonId": "m4-04"
     },
     {
       "id": "m7-02-h08",
@@ -338,7 +369,8 @@
         }
       ],
       "answer": "А",
-      "explanation": "⅓·9·4=12."
+      "explanation": "⅓·9·4=12.",
+      "reviewLessonId": "m6-03"
     },
     {
       "id": "m7-02-h09",
@@ -367,7 +399,8 @@
         }
       ],
       "answer": "Г",
-      "explanation": "3·2=6."
+      "explanation": "3·2=6.",
+      "reviewLessonId": "m1-04"
     },
     {
       "id": "m7-02-h10",
@@ -396,7 +429,8 @@
         }
       ],
       "answer": "А",
-      "explanation": "2−2=0, ⊥."
+      "explanation": "2−2=0, ⊥.",
+      "reviewLessonId": "m5-08"
     },
     {
       "id": "m7-02-h11",
@@ -425,7 +459,8 @@
         }
       ],
       "answer": "В",
-      "explanation": "4π·9=36π."
+      "explanation": "4π·9=36π.",
+      "reviewLessonId": "m5-05"
     },
     {
       "id": "m7-02-h12",
@@ -454,7 +489,8 @@
         }
       ],
       "answer": "В",
-      "explanation": "3."
+      "explanation": "3.",
+      "reviewLessonId": "m3-07"
     },
     {
       "id": "m7-02-h13",
@@ -483,7 +519,8 @@
         }
       ],
       "answer": "В",
-      "explanation": "x−1>0."
+      "explanation": "x−1>0.",
+      "reviewLessonId": "m1-10"
     },
     {
       "id": "m7-02-h14",
@@ -512,7 +549,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "2π·2·3=12π."
+      "explanation": "2π·2·3=12π.",
+      "reviewLessonId": "m1-04"
     },
     {
       "id": "m7-02-h15",
@@ -541,7 +579,8 @@
         }
       ],
       "answer": "Б",
-      "explanation": "6."
+      "explanation": "6.",
+      "reviewLessonId": "m4-02"
     },
     {
       "id": "m7-02-h16",
@@ -588,7 +627,8 @@
         "2": "Б",
         "3": "В"
       },
-      "explanation": "16; 8; 4."
+      "explanation": "16; 8; 4.",
+      "reviewLessonId": "m2-01"
     },
     {
       "id": "m7-02-h17",
@@ -635,7 +675,8 @@
         "2": "Б",
         "3": "В"
       },
-      "explanation": "АП / ГП / стала."
+      "explanation": "АП / ГП / стала.",
+      "reviewLessonId": "m3-07"
     },
     {
       "id": "m7-02-h18",
@@ -682,35 +723,42 @@
         "2": "Б",
         "3": "В"
       },
-      "explanation": "Три розділи програми."
+      "explanation": "Три розділи програми.",
+      "reviewLessonId": "m1-01"
     },
     {
       "id": "m7-02-h19",
       "type": "open",
       "prompt": "НСК(6,8) =",
       "answer": "24",
-      "explanation": "24."
+      "explanation": "24.",
+      "reviewLessonId": "m1-01"
     },
     {
       "id": "m7-02-h20",
       "type": "open",
       "prompt": "f(x)=x². f'(5)=",
       "answer": "10",
-      "explanation": "2x=10."
+      "explanation": "2x=10.",
+      "reviewLessonId": "m2-02"
     },
     {
       "id": "m7-02-h21",
       "type": "open",
       "prompt": "Площа трапеції основи 5 і 9, висота 4:",
       "answer": "28",
-      "explanation": "(14/2)·4=28."
+      "explanation": "(14/2)·4=28.",
+      "reviewLessonId": "m5-05"
     },
     {
       "id": "m7-02-h22",
       "type": "open",
       "prompt": "|(6;8)| =",
       "answer": "10",
-      "explanation": "10."
+      "explanation": "10.",
+      "reviewLessonId": "m1-06"
     }
-  ]
+  ],
+  "liveTopic": "4 задачі з теми «Пробний НМТ №2» + розбір типових помилок ДЗ",
+  "videoUrl": null
 }
