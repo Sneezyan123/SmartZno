@@ -15,9 +15,9 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "SmartZno — онлайн-підготовка до НМТ",
+  title: "SmartZno - онлайн-підготовка до НМТ",
   description:
-    "Когорти, куратор, mock НМТ і підписка від 990 ₴/міс за предмет. Діагностика рівня перед стартом.",
+    "Когорти, куратор, авторський варіант НМТ і підписка від 990 ₴/міс за предмет. Діагностика рівня перед стартом.",
 };
 
 export default function RootLayout({

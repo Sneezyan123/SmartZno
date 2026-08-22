@@ -13,6 +13,9 @@
   --surface: #ffffff;
   --night: #000000;
   --violet: #7c1fa8;
+  --brand-blue: #5b8cff;
+  --ink-game: #111318;
+  --play: #9dff57;
   --radius: 16px;
   --radius-sm: 12px;
   --shadow-soft: 0 18px 50px rgba(7, 4, 12, 0.08);
@@ -35,6 +38,9 @@
   --color-surface: var(--surface);
   --color-night: var(--night);
   --color-violet: var(--violet);
+  --color-brand-blue: var(--brand-blue);
+  --color-ink-game: var(--ink-game);
+  --color-play: var(--play);
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
 }
@@ -105,9 +111,46 @@ body {
   animation: fadeUp 0.95s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
 }
 
+@keyframes kenburns {
+  0% {
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.2) translate3d(-1.5%, -1%, 0);
+  }
+}
+
+.chapter-hero-still {
+  transform-origin: center center;
+  animation: kenburns 16s ease-out forwards;
+}
+
+.chapter-hero-copy {
+  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.chapter-body > * {
+  animation: fadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.chapter-body > *:nth-child(1) { animation-delay: 0.08s; }
+.chapter-body > *:nth-child(2) { animation-delay: 0.14s; }
+.chapter-body > *:nth-child(3) { animation-delay: 0.2s; }
+.chapter-body > *:nth-child(4) { animation-delay: 0.26s; }
+.chapter-body > *:nth-child(5) { animation-delay: 0.32s; }
+.chapter-body > *:nth-child(n + 6) { animation-delay: 0.36s; }
+
 .animate-bar {
   transform-origin: left center;
   animation: barGrow 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 .surface-card {
@@ -117,23 +160,220 @@ body {
   box-shadow: var(--shadow-soft);
 }
 
+.btn-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--brand-blue);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.9rem 1.75rem;
+  transition: background 0.2s ease;
+}
+
+.btn-blue:hover {
+  background: #4a7af0;
+}
+
+.hero-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1.1px, transparent 1.2px);
+  background-size: 22px 22px;
+  animation: heroDotsDrift 32s linear infinite;
+}
+
+@keyframes heroDotsDrift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 22px 22px;
+  }
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes heroDrift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -12px);
+  }
+}
+
+@keyframes heroPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.28);
+  }
+}
+
+@keyframes heroSpinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heroOrbBreath {
+  0%,
+  100% {
+    opacity: 0.28;
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.08) translate(12px, -10px);
+  }
+}
+
+@keyframes heroWaypointPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.55;
+  }
+}
+
+.hero-float {
+  animation: heroFloat 4.5s ease-in-out infinite;
+}
+
+.hero-drift {
+  animation: heroDrift 8s ease-in-out infinite;
+}
+
+.hero-drift-slow {
+  animation: heroDrift 12s ease-in-out infinite;
+}
+
+.hero-pulse {
+  animation: heroPulse 3.6s ease-in-out infinite;
+}
+
+.hero-spin-slow {
+  animation: heroSpinSlow 28s linear infinite;
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(64px);
+}
+
+.hero-orb-blue {
+  top: 10%;
+  left: 6%;
+  height: 18rem;
+  width: 18rem;
+  background: rgba(91, 140, 255, 0.28);
+  animation: heroOrbBreath 9s ease-in-out infinite;
+}
+
+.hero-orb-lime {
+  top: 18%;
+  right: 12%;
+  height: 14rem;
+  width: 14rem;
+  background: rgba(157, 255, 87, 0.16);
+  animation: heroOrbBreath 11s ease-in-out infinite reverse;
+}
+
+.hero-orb-soft {
+  bottom: 18%;
+  left: 32%;
+  height: 12rem;
+  width: 12rem;
+  background: rgba(255, 255, 255, 0.06);
+  animation: heroOrbBreath 13s ease-in-out infinite;
+}
+
+.hero-girl::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 12% 8% 16%;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side at 46% 58%, rgba(91, 140, 255, 0.34), transparent 74%),
+    radial-gradient(closest-side at 62% 36%, rgba(157, 255, 87, 0.14), transparent 68%);
+  filter: blur(22px);
+  animation: heroGirlGlow 5.2s ease-in-out infinite;
+}
+
+.hero-girl img {
+  filter: drop-shadow(0 0 14px rgba(91, 140, 255, 0.22)) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.28));
+}
+
+@keyframes heroGirlGlow {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.hero-waypoint-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: heroWaypointPulse 2.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-dots,
+  .hero-float,
+  .hero-drift,
+  .hero-drift-slow,
+  .hero-pulse,
+  .hero-spin-slow,
+  .hero-orb,
+  .hero-waypoint-ring,
+  .hero-girl::before {
+    animation: none;
+  }
+}
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background: linear-gradient(90deg, #f5c518 0%, #ffe566 100%);
-  color: #1a1200;
-  font-weight: 700;
+  background: var(--brand-blue);
+  color: #fff;
+  font-weight: 600;
   font-size: 0.875rem;
   padding: 0.85rem 1.4rem;
-  box-shadow: 0 10px 32px rgba(245, 197, 24, 0.42);
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .btn-primary:hover {
-  filter: brightness(1.06);
-  transform: translateY(-1px);
+  background: #4a7af0;
 }
 
 .btn-ghost {
@@ -182,4 +422,237 @@ body {
 
 .bg-night {
   background-color: #000;
+}
+
+.flip-scene {
+  display: block;
+  width: 100%;
+  min-height: 12.5rem;
+  perspective: 900px;
+}
+
+.flip-scene-inner {
+  position: relative;
+  min-height: 12.5rem;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.flip-scene-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-face-back {
+  transform: rotateY(180deg);
+}
+
+.quiz-flip-scene {
+  display: block;
+  width: 100%;
+  min-height: 16.5rem;
+  perspective: 900px;
+}
+
+.quiz-flip-scene .flip-scene-inner {
+  min-height: 16.5rem;
+}
+
+.hist-page {
+  background: #07080c;
+  color: #f4f1ea;
+}
+
+.hist-grain {
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.045) 0.7px, transparent 0.8px),
+    linear-gradient(180deg, rgba(255, 248, 230, 0.03), transparent 28%);
+  background-size: 18px 18px, 100% 100%;
+}
+
+@keyframes histYearFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.28;
+  }
+  50% {
+    transform: translateY(-14px);
+    opacity: 0.55;
+  }
+}
+
+.hist-year {
+  animation: histYearFloat 7s ease-in-out infinite;
+}
+
+.hist-reel {
+  scrollbar-width: none;
+}
+
+.hist-reel::-webkit-scrollbar {
+  display: none;
+}
+
+.hist-frame {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hist-frame:hover {
+  transform: translateY(-8px) rotate(-0.6deg);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+}
+
+@keyframes histPulseLine {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.hist-scan {
+  animation: histPulseLine 3.8s ease-in-out infinite;
+}
+
+/* Бланк тесту з математики: друкований вигляд НМТ */
+.nmt-sheet {
+  font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+  color: #1a1a1a;
+}
+
+.m-var {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 1.08em;
+}
+
+.m-fn {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.nmt-sheet sub,
+.nmt-sheet sup {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 0.66em;
+}
+
+.nmt-sheet .katex {
+  font-size: 1.05em;
+}
+
+.math-page {
+  background: #05070c;
+  color: #edf4ff;
+}
+
+.math-grid {
+  background-image:
+    linear-gradient(rgba(157, 255, 87, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 140, 255, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes mathGlow {
+  0%,
+  100% {
+    opacity: 0.22;
+    filter: blur(0);
+  }
+  50% {
+    opacity: 0.5;
+    filter: blur(0.4px);
+  }
+}
+
+.math-glyph {
+  animation: mathGlow 6s ease-in-out infinite;
+}
+
+/* Animated journey (шлях «наобум» / шлях SMART) */
+.why-reveal {
+  transform-origin: 0 0;
+  transition: transform 0.75s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.why-marker {
+  transition: transform 0.75s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.why-mark {
+  opacity: 0;
+  transform: scale(0.35) rotate(-22deg);
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    opacity 0.3s ease,
+    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.why-mark.is-on {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hist-year,
+  .hist-scan,
+  .hist-frame,
+  .math-glyph {
+    animation: none;
+    transform: none;
+  }
+
+  .why-reveal,
+  .why-marker,
+  .why-mark {
+    transition: none;
+  }
+}
+
+@media print {
+  @page {
+    margin: 10mm;
+    size: A4;
+  }
+
+  .cheat-sheet-print-hide {
+    display: none !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .cheat-sheet,
+  .cheat-sheet * {
+    visibility: visible;
+  }
+
+  .cheat-sheet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+}
+
+@keyframes bear-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(6deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(6deg);
+  }
 }

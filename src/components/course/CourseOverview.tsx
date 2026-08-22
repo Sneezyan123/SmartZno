@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import type { Curriculum, Lesson } from "@/lib/course/types";
+import type { CourseSlug, Curriculum, Lesson } from "@/lib/course/types";
+import { getCourseMeta } from "@/lib/course/catalog";
 import {
   getLessonProgress,
   lessonCompletionRatio,
@@ -12,16 +13,18 @@ import {
 import { CourseAuthGate, CourseHeader } from "@/components/course/CourseShell";
 
 type Props = {
+  course: CourseSlug;
   curriculum: Curriculum;
   lessonsById: Record<string, Pick<Lesson, "id" | "title" | "status" | "order" | "quizCards" | "homework">>;
 };
 
-export function CourseOverview({ curriculum, lessonsById }: Props) {
+export function CourseOverview({ course, curriculum, lessonsById }: Props) {
   const [progress, setProgress] = useState<CourseProgress>({});
+  const meta = getCourseMeta(course);
 
   useEffect(() => {
-    setProgress(loadProgress());
-  }, []);
+    setProgress(loadProgress(course));
+  }, [course]);
 
   const readyCount = Object.values(lessonsById).filter((l) => l.status === "ready").length;
   const total = Object.keys(lessonsById).length;
@@ -29,11 +32,11 @@ export function CourseOverview({ curriculum, lessonsById }: Props) {
   return (
     <CourseAuthGate>
       <main className="min-h-screen bg-paper">
-        <CourseHeader title={curriculum.title} backHref="/cabinet" backLabel="Кабінет" />
+        <CourseHeader title={curriculum.title} course={course} backHref="/cabinet" backLabel="Кабінет" />
         <div className="mx-auto max-w-4xl px-5 py-10">
           <p className="text-sm uppercase tracking-wide text-teal">Курс · {curriculum.year}</p>
           <h2 className="mt-2 font-[family-name:var(--font-display)] text-3xl font-semibold text-ink">
-            Підготовка до НМТ з математики
+            {meta.headline}
           </h2>
           <p className="mt-3 max-w-2xl text-forest/75">{curriculum.description}</p>
           <p className="mt-2 text-sm text-forest/55">{curriculum.programSource}</p>
@@ -59,7 +62,7 @@ export function CourseOverview({ curriculum, lessonsById }: Props) {
                   {mod.lessonIds.map((id, i) => {
                     const lesson = lessonsById[id];
                     if (!lesson) return null;
-                    const p = progress[id] ?? getLessonProgress(id);
+                    const p = progress[id] ?? getLessonProgress(id, course);
                     const ratio = lessonCompletionRatio(
                       p,
                       lesson.quizCards?.length ?? 0,
@@ -68,7 +71,7 @@ export function CourseOverview({ curriculum, lessonsById }: Props) {
                     return (
                       <li key={id}>
                         <Link
-                          href={`/cabinet/courses/math/${id}`}
+                          href={`/cabinet/courses/${course}/${id}`}
                           className="flex items-center justify-between gap-3 rounded-[var(--radius-sm)] border border-line bg-white px-4 py-3 transition hover:border-teal/40"
                         >
                           <div>

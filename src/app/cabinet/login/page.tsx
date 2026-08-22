@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { getStudentToken, studentLogin } from "@/lib/crm";
+import { checkStudentSession, studentLogin } from "@/lib/crm";
 
 export default function CabinetLoginPage() {
   const router = useRouter();
@@ -13,7 +13,14 @@ export default function CabinetLoginPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (getStudentToken()) router.replace("/cabinet");
+    let cancelled = false;
+    checkStudentSession().then((session) => {
+      if (cancelled) return;
+      if (session.status === "ok") router.replace("/cabinet");
+    });
+    return () => {
+      cancelled = true;
+    };
   }, [router]);
 
   async function onSubmit(e: React.FormEvent) {

@@ -78,15 +78,16 @@ export async function submitDiagnostic(payload: {
 }
 
 export async function submitLead(payload: Record<string, unknown>): Promise<LeadResult> {
-  const res = await fetch(`${CRM_API_URL}/leads/incoming`, {
+  const res = await fetch("/api/leads", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
+  const data = await res.json().catch(() => ({}));
   if (!res.ok) {
-    throw new Error("Не вдалося надіслати заявку");
+    throw new Error(typeof data.error === "string" ? data.error : "Не вдалося надіслати заявку");
   }
-  return res.json();
+  return data as LeadResult;
 }
 
 export async function studentLogin(email: string, password: string) {
@@ -128,12 +129,40 @@ export async function studentRegister(payload: {
 export async function studentMe(): Promise<StudentMe> {
   const token = getStudentToken();
   if (!token) throw new Error("Не авторизовано");
-  const res = await fetch(`${CRM_API_URL}/students/me`, {
-    headers: { Authorization: `Bearer ${token}` },
-  });
-  if (!res.ok) {
+  let res: Response;
+  try {
+    res = await fetch(`${CRM_API_URL}/students/me`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+  } catch {
+    throw new Error("Немає зв’язку з API. Перевір, що бекенд запущено на :8000.");
+  }
+  if (res.status === 401 || res.status === 403) {
     clearStudentToken();
     throw new Error("Сесію закінчено");
   }
+  if (!res.ok) {
+    throw new Error("Не вдалося завантажити кабінет");
+  }
   return res.json();
+}
+
+export type StudentSession =
+  | { status: "anonymous" }
+  | { status: "ok"; me: StudentMe }
+  | { status: "expired" }
+  | { status: "offline"; message: string };
+
+export async function checkStudentSession(): Promise<StudentSession> {
+  if (!getStudentToken()) return { status: "anonymous" };
+  try {
+    const me = await studentMe();
+    return { status: "ok", me };
+  } catch (err) {
+    if (!getStudentToken()) return { status: "expired" };
+    return {
+      status: "offline",
+      message: err instanceof Error ? err.message : "Немає зв’язку з API",
+    };
+  }
 }

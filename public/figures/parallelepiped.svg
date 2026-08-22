@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 215" width="290" height="215" role="img">
+  <title>@O<>:CB=89 ?0@0;5;5?V?54 ABCDA1B1C1D1</title>
+  <style>
+    .e { fill: none; stroke: #222; stroke-width: 1.7; stroke-linejoin: round; stroke-linecap: round; }
+    .h { fill: none; stroke: #222; stroke-width: 1.3; stroke-dasharray: 5 4; }
+    .lbl { font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 16px; fill: #1a1a1a; }
+    .idx { font-size: 10px; }
+  </style>
+
+  <path class="h" d="M50 180 110 140 250 140 M110 140 110 20" />
+  <path class="e" d="M50 180 190 180 250 140" />
+  <path class="e" d="M50 180 50 60 M190 180 190 60 M250 140 250 20" />
+  <path class="e" d="M50 60 190 60 250 20 110 20Z" />
+
+  <text class="lbl" x="30" y="192">A</text>
+  <text class="lbl" x="185" y="200">B</text>
+  <text class="lbl" x="258" y="152">C</text>
+  <text class="lbl" x="86" y="136">D</text>
+
+  <text class="lbl" x="24" y="58">A<tspan class="idx" dy="4">1</tspan></text>
+  <text class="lbl" x="196" y="74">B<tspan class="idx" dy="4">1</tspan></text>
+  <text class="lbl" x="258" y="22">C<tspan class="idx" dy="4">1</tspan></text>
+  <text class="lbl" x="86" y="18">D<tspan class="idx" dy="4">1</tspan></text>
+</svg>

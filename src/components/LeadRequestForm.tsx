@@ -68,7 +68,7 @@ export function LeadRequestForm({ variant = "hero", source = "landing_hero" }: P
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-[11px] font-semibold tracking-wide text-teal-bright uppercase">
-                Mock НМТ · математика
+                Авторський варіант НМТ · математика
               </p>
               <p className="mt-0.5 text-xs text-white/50">типовий прогрес за 5 місяців</p>
             </div>
@@ -95,7 +95,7 @@ export function LeadRequestForm({ variant = "hero", source = "landing_hero" }: P
             {[
               { l: "теми", v: "42/48" },
               { l: "ДЗ", v: "96%" },
-              { l: "mock", v: "4" },
+              { l: "варіант НМТ", v: "4" },
             ].map((x) => (
               <div key={x.l} className="rounded-lg bg-black/25 px-2 py-2">
                 <p className="font-[family-name:var(--font-display)] text-xs font-semibold">{x.v}</p>
@@ -115,7 +115,7 @@ export function LeadRequestForm({ variant = "hero", source = "landing_hero" }: P
             <span className="bg-gradient-to-r from-teal to-teal-bright bg-clip-text text-transparent">НМТ</span>
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-white/55">
-            Стартовий бал, слабкі теми й рекомендація потоку — без продажного уроку 1-на-1.
+            Стартовий бал, слабкі теми й рекомендація потоку - без продажного уроку 1-на-1.
           </p>
 
           <div className="mt-5 space-y-3">

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getStudentToken } from "@/lib/crm";
+import type { CourseSlug } from "@/lib/course/types";
+import { getCourseMeta } from "@/lib/course/catalog";
 
 export function CourseAuthGate({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -30,18 +32,21 @@ export function CourseAuthGate({ children }: { children: React.ReactNode }) {
 
 export function CourseHeader({
   title,
-  backHref = "/cabinet/courses/math",
+  course = "math",
+  backHref,
   backLabel = "До курсу",
 }: {
   title: string;
+  course?: CourseSlug;
   backHref?: string;
   backLabel?: string;
 }) {
+  const href = backHref ?? `/cabinet/courses/${course}`;
   return (
-    <header className="border-b border-line bg-white/70 backdrop-blur">
+    <header className="cheat-sheet-print-hide border-b border-line bg-white/70 backdrop-blur">
       <div className="mx-auto flex max-w-4xl items-center justify-between gap-4 px-5 py-5">
         <div>
-          <Link href={backHref} className="text-sm text-teal hover:underline">
+          <Link href={href} className="text-sm text-teal hover:underline">
             ← {backLabel}
           </Link>
           <h1 className="mt-1 font-[family-name:var(--font-display)] text-lg font-semibold text-forest md:text-xl">
@@ -59,15 +64,19 @@ export function CourseHeader({
 export function LessonNav({
   lessonId,
   active,
+  course = "math",
 }: {
   lessonId: string;
-  active: "theory" | "cards" | "homework";
+  active: "theory" | "notes" | "cards" | "homework";
+  course?: CourseSlug;
 }) {
-  const base = `/cabinet/courses/math/${lessonId}`;
+  const base = `/cabinet/courses/${course}/${lessonId}`;
+  const nav = getCourseMeta(course).nav;
   const items = [
-    { id: "theory" as const, href: base, label: "Теорія" },
-    { id: "cards" as const, href: `${base}/cards`, label: "Квізкарти" },
-    { id: "homework" as const, href: `${base}/homework`, label: "Завдання" },
+    { id: "theory" as const, href: base, label: nav.theory },
+    ...(nav.notes ? [{ id: "notes" as const, href: `${base}/notes`, label: nav.notes }] : []),
+    { id: "cards" as const, href: `${base}/cards`, label: nav.cards },
+    { id: "homework" as const, href: `${base}/homework`, label: nav.homework },
   ];
   return (
     <nav className="flex flex-wrap gap-2">

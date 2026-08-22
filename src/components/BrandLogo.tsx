@@ -23,10 +23,14 @@ export function BrandLogo({ size = "nav" }: Props) {
         priority={compact}
       />
       <span className="leading-tight">
-        <span className="block font-[family-name:var(--font-display)] text-base font-semibold tracking-tight text-white md:text-lg">
+        <span
+          className="block font-[family-name:var(--font-display)] text-base font-semibold tracking-tight text-white md:text-lg"
+        >
           SmartZno
         </span>
-        <span className="hidden text-[11px] text-teal-bright/80 sm:block">підготовка до НМТ</span>
+        <span className="hidden text-[11px] text-white/50 sm:block">
+          підготовка до НМТ
+        </span>
       </span>
     </Link>
   );
