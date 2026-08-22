@@ -6,9 +6,9 @@
   "order": 5,
   "status": "ready",
   "objectives": [
-    "Знати період sin, cos, tg",
-    "Читати основні точки графіка",
-    "Розуміти зсуви"
+    "Період: sin/cos — 2π, tg — π",
+    "Парність: cos парна, sin і tg непарні",
+    "Ескіз sin/cos: нулі, екстремуми, асимптоти tg"
   ],
   "nmtTags": [
     "функції",
@@ -16,115 +16,194 @@
   ],
   "subtopics": [
     "період",
-    "графіки",
-    "зсуви"
+    "парність",
+    "графік sin/cos"
   ],
   "theory": [
     {
       "type": "heading",
-      "content": "Періоди й область"
+      "content": "Навіщо цей урок на НМТ"
+    },
+    {
+      "type": "paragraph",
+      "content": "Графік sin/cos і період T=2π/|ω| — регулярні бали. Пастка: період sin 2x це π, не 2π. Знак і парність зрізають «який графік»."
+    },
+    {
+      "type": "heading",
+      "content": "sin і cos"
     },
     {
       "type": "formula",
-      "content": "sin(x+2π)=sin x;  cos(x+2π)=cos x;  tg(x+π)=tg x"
+      "content": "T(sin)=T(cos)=2π;   sin — непарна, cos — парна;   E=[−1; 1]"
     },
     {
-      "type": "list",
-      "content": "База:",
+      "type": "paragraph",
+      "content": "sin x: нулі πk; max=1 при π/2+2πk; min=−1 при 3π/2+2πk. Через (0; 0).\ncos x: нулі π/2+πk; max=1 при 2πk; min=−1 при π+2πk. Через (0; 1). Зсув: cos x = sin(x+π/2)."
+    },
+    {
+      "type": "heading",
+      "content": "tg і період зі стиском"
+    },
+    {
+      "type": "formula",
+      "content": "tg x = sin x / cos x;   T=π;   непарна;   асимптоти x=π/2+πk"
+    },
+    {
+      "type": "formula",
+      "content": "y=sin(ωx), y=cos(ωx): період T=2π/|ω|;   y=sin(x−φ) — зсув управо на φ"
+    },
+    {
+      "type": "tip",
+      "content": "sin 2x має період π. Не пиши «завжди 2π». tg не визначений, де cos=0. |sin|≤1 — якщо «sin x=2» → ∅."
+    },
+    {
+      "type": "example",
+      "content": "y=sin x на [0; 2π]",
       "items": [
-        "y=sin x, y=cos x: область R, значення [−1; 1]",
-        "y=tg x: область x ≠ π/2 + πk, значення R",
-        "sin 0=0, sin(π/2)=1, cos 0=1, cos(π/2)=0"
+        "0 → 1 (π/2) → 0 (π) → −1 (3π/2) → 0 (2π).",
+        "Непарна: ліворуч — симетрія початку.",
+        "Амплітуда 1."
       ]
     },
     {
       "type": "example",
-      "content": "y=sin(x−π/2)= −cos x (зсув праворуч на π/2)."
+      "content": "Період y=cos 2x",
+      "items": [
+        "ω=2, T=2π/2=π.",
+        "На [0; π] повний «гребінь» косинуса.",
+        "Нулі там, де 2x=π/2+πk ⇒ x=π/4+πk/2."
+      ]
     },
     {
-      "type": "tip",
-      "content": "Таблиця значень для 0°,30°,45°,60°,90° — у довідці НМТ."
+      "type": "example",
+      "content": "y=tg x",
+      "items": [
+        "Через (0; 0), зростає на (−π/2; π/2).",
+        "Вертикальні асимптоти ±π/2.",
+        "Період π: гілка повторюється."
+      ]
+    },
+    {
+      "type": "list",
+      "content": "Чек-лист помилок:",
+      "items": [
+        "Період sin/cos — 2π, tg — π.",
+        "sin 2x: T=π.",
+        "cos парна, sin непарна.",
+        "|sin|≤1, |cos|≤1.",
+        "tg: дірки π/2+πk.",
+        "Зсув sin(x−φ) — вправо.",
+        "Нулі sin — πk, не π/2."
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Вихід з уроку"
+    },
+    {
+      "type": "paragraph",
+      "content": "Якщо <70% ДЗ — повтор карток і 1 розбір. Якщо ≥85% — наступний урок за планом тижня. Рівень C: базові задачі. Рівень A: відкриті «як дорогі» в кінці ДЗ."
     }
   ],
   "quizCards": [
     {
       "id": "m3-05-c01",
-      "front": "Період sin",
+      "front": "Період sin, cos",
       "back": "2π"
     },
     {
       "id": "m3-05-c02",
-      "front": "Період cos",
-      "back": "2π"
-    },
-    {
-      "id": "m3-05-c03",
       "front": "Період tg",
       "back": "π"
     },
     {
+      "id": "m3-05-c03",
+      "front": "sin непарна",
+      "back": "sin(−x)=−sin x"
+    },
+    {
       "id": "m3-05-c04",
-      "front": "Діапазон sin",
-      "back": "[−1;1]"
+      "front": "cos парна",
+      "back": "cos(−x)=cos x"
     },
     {
       "id": "m3-05-c05",
-      "front": "sin(π/2)",
-      "back": "1"
+      "front": "E sin, cos",
+      "back": "[−1; 1]"
     },
     {
       "id": "m3-05-c06",
-      "front": "cos π",
-      "back": "−1"
+      "front": "Нулі sin",
+      "back": "πk"
     },
     {
       "id": "m3-05-c07",
-      "front": "ОДЗ tg",
-      "back": "cos x ≠ 0"
+      "front": "Нулі cos",
+      "back": "π/2+πk"
     },
     {
       "id": "m3-05-c08",
-      "front": "Парність cos",
-      "back": "парна"
+      "front": "max sin",
+      "back": "1 при π/2+2πk"
     },
     {
       "id": "m3-05-c09",
-      "front": "Парність sin",
-      "back": "непарна"
+      "front": "(0; 1) на",
+      "back": "y=cos x"
     },
     {
       "id": "m3-05-c10",
-      "front": "y=sin(x+T)",
-      "back": "зсув ліворуч на T"
+      "front": "(0; 0) на",
+      "back": "y=sin x і y=tg x"
     },
     {
       "id": "m3-05-c11",
-      "front": "Максимум sin",
-      "back": "1"
+      "front": "T(sin ωx)",
+      "back": "2π/|ω|"
     },
     {
       "id": "m3-05-c12",
-      "front": "cos 90°",
-      "back": "0"
+      "front": "sin 2x, період",
+      "back": "π"
+    },
+    {
+      "id": "m3-05-c13",
+      "front": "Асимптоти tg",
+      "back": "π/2+πk"
+    },
+    {
+      "id": "m3-05-c14",
+      "front": "sin x=2",
+      "back": "∅"
+    },
+    {
+      "id": "m3-05-c15",
+      "front": "cos x = sin(x+π/2)",
+      "back": "зсув"
+    },
+    {
+      "id": "m3-05-c16",
+      "front": "Пастка",
+      "back": "період не завжди 2π"
     }
   ],
   "homework": [
     {
       "id": "m3-05-h1",
       "type": "single",
-      "prompt": "Період y=sin x:",
+      "prompt": "Основний період y=sin x:",
       "options": [
         {
           "key": "А",
-          "text": "π/2"
-        },
-        {
-          "key": "Б",
           "text": "π"
         },
         {
-          "key": "В",
+          "key": "Б",
           "text": "2π"
+        },
+        {
+          "key": "В",
+          "text": "π/2"
         },
         {
           "key": "Г",
@@ -135,27 +214,71 @@
           "text": "1"
         }
       ],
-      "answer": "В",
+      "answer": "Б",
       "explanation": "2π."
     },
     {
       "id": "m3-05-h2",
-      "type": "open",
-      "prompt": "sin 90° =",
-      "answer": "1",
-      "explanation": "Таблиця."
+      "type": "single",
+      "prompt": "y=cos x є функцією:",
+      "options": [
+        {
+          "key": "А",
+          "text": "непарною"
+        },
+        {
+          "key": "Б",
+          "text": "парною"
+        },
+        {
+          "key": "В",
+          "text": "ні такою ні такою"
+        },
+        {
+          "key": "Г",
+          "text": "лінійною"
+        },
+        {
+          "key": "Д",
+          "text": "з E=R"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "cos(−x)=cos x."
     },
     {
       "id": "m3-05-h3",
-      "type": "open",
-      "prompt": "Найбільше значення y=cos x:",
-      "answer": "1",
-      "explanation": "1."
+      "type": "single",
+      "prompt": "Період y=sin 2x:",
+      "options": [
+        {
+          "key": "А",
+          "text": "2π"
+        },
+        {
+          "key": "Б",
+          "text": "π"
+        },
+        {
+          "key": "В",
+          "text": "4π"
+        },
+        {
+          "key": "Г",
+          "text": "π/2"
+        },
+        {
+          "key": "Д",
+          "text": "1"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "2π/2=π."
     },
     {
       "id": "m3-05-h4",
       "type": "single",
-      "prompt": "y=tg x не визначена при:",
+      "prompt": "Асимптота y=tg x — пряма:",
       "options": [
         {
           "key": "А",
@@ -163,7 +286,7 @@
         },
         {
           "key": "Б",
-          "text": "x=π"
+          "text": "y=0"
         },
         {
           "key": "В",
@@ -171,11 +294,11 @@
         },
         {
           "key": "Г",
-          "text": "x=2π"
+          "text": "y=1"
         },
         {
           "key": "Д",
-          "text": "x=π/4"
+          "text": "x=π"
         }
       ],
       "answer": "В",
@@ -184,7 +307,7 @@
     {
       "id": "m3-05-h5",
       "type": "match",
-      "prompt": "Функція → період",
+      "prompt": "Функція → властивість",
       "left": [
         {
           "key": "1",
@@ -192,33 +315,33 @@
         },
         {
           "key": "2",
-          "text": "tg x"
+          "text": "cos x"
         },
         {
           "key": "3",
-          "text": "cos 2x"
+          "text": "tg x"
         }
       ],
       "right": [
         {
           "key": "А",
-          "text": "2π"
+          "text": "непарна, T=2π"
         },
         {
           "key": "Б",
-          "text": "π"
+          "text": "парна, T=2π"
         },
         {
           "key": "В",
-          "text": "π"
+          "text": "непарна, T=π"
         },
         {
           "key": "Г",
-          "text": "4π"
+          "text": "парна, T=π"
         },
         {
           "key": "Д",
-          "text": "1"
+          "text": "E=R для всіх x"
         }
       ],
       "answer": {
@@ -226,43 +349,112 @@
         "2": "Б",
         "3": "В"
       },
-      "explanation": "cos 2x має період π."
+      "explanation": "База."
     },
     {
       "id": "m3-05-h6",
       "type": "open",
-      "prompt": "cos 0° =",
+      "prompt": "sin(π/2)",
       "answer": "1",
-      "explanation": "1."
+      "explanation": "Максимум."
     },
     {
       "id": "m3-05-h7",
       "type": "single",
-      "prompt": "Функція y=sin x є:",
+      "prompt": "Найменший додатний період y=cos(x/2):",
       "options": [
         {
           "key": "А",
-          "text": "парною"
+          "text": "π"
         },
         {
           "key": "Б",
-          "text": "непарною"
+          "text": "2π"
         },
         {
           "key": "В",
-          "text": "сталою"
+          "text": "4π"
         },
         {
           "key": "Г",
-          "text": "лінійною"
+          "text": "π/2"
         },
         {
           "key": "Д",
-          "text": "оберненою до tg"
+          "text": "1"
         }
       ],
-      "answer": "Б",
-      "explanation": "sin(−x)=−sin x."
+      "answer": "В",
+      "explanation": "2π / (1/2) = 4π.",
+      "level": "A"
+    },
+    {
+      "id": "m3-05-h8",
+      "type": "single",
+      "prompt": "Множина значень y=sin x:",
+      "options": [
+        {
+          "key": "А",
+          "text": "R"
+        },
+        {
+          "key": "Б",
+          "text": "[0; 1]"
+        },
+        {
+          "key": "В",
+          "text": "[−1; 1]"
+        },
+        {
+          "key": "Г",
+          "text": "(−1; 1)"
+        },
+        {
+          "key": "Д",
+          "text": "[−2; 2]"
+        }
+      ],
+      "answer": "В",
+      "explanation": "Амплітуда 1."
+    },
+    {
+      "id": "m3-05-h9",
+      "type": "open",
+      "prompt": "cos 0",
+      "answer": "1",
+      "explanation": "1."
+    },
+    {
+      "id": "m3-05-h10",
+      "type": "single",
+      "prompt": "y=sin x проходить через початок координат?",
+      "options": [
+        {
+          "key": "А",
+          "text": "так"
+        },
+        {
+          "key": "Б",
+          "text": "ні"
+        },
+        {
+          "key": "В",
+          "text": "лише при π"
+        },
+        {
+          "key": "Г",
+          "text": "лише в I чверті"
+        },
+        {
+          "key": "Д",
+          "text": "залежить від періоду"
+        }
+      ],
+      "answer": "А",
+      "explanation": "sin 0=0.",
+      "level": "C"
     }
-  ]
+  ],
+  "videoUrl": null,
+  "liveTopic": "4 задачі з теми «Тригонометричні функції» + розбір типових помилок ДЗ"
 }

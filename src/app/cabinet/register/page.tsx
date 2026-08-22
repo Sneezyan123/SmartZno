@@ -43,7 +43,7 @@ export default function CabinetRegisterPage() {
     <main className="min-h-screen bg-paper">
       <header className="border-b border-line">
         <div className="mx-auto flex max-w-lg items-center justify-between px-5 py-5">
-          <Link href="/" className="font-[family-name:var(--font-display)] text-lg font-semibold text-forest">
+          <Link href="/" className="font-[family-name:var(--font-display)] text-lg font-semibold text-white">
             SmartZno
           </Link>
           <Link href="/cabinet/login" className="text-sm text-forest/70 hover:text-forest">
@@ -67,7 +67,7 @@ export default function CabinetRegisterPage() {
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 outline-none focus:border-teal"
+              className="field mt-2 px-3 py-2.5"
             />
           </label>
           <label className="block text-sm sm:col-span-2">
@@ -77,7 +77,7 @@ export default function CabinetRegisterPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 outline-none focus:border-teal"
+              className="field mt-2 px-3 py-2.5"
             />
           </label>
           <label className="block text-sm">
@@ -87,7 +87,7 @@ export default function CabinetRegisterPage() {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="+380..."
-              className="mt-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 outline-none focus:border-teal"
+              className="field mt-2 px-3 py-2.5"
             />
           </label>
           <label className="block text-sm">
@@ -98,7 +98,7 @@ export default function CabinetRegisterPage() {
               minLength={6}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 outline-none focus:border-teal"
+              className="field mt-2 px-3 py-2.5"
             />
           </label>
           <label className="block text-sm">
@@ -106,7 +106,7 @@ export default function CabinetRegisterPage() {
             <select
               value={grade}
               onChange={(e) => setGrade(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 outline-none focus:border-teal"
+              className="field mt-2 px-3 py-2.5"
             >
               <option value="9">9</option>
               <option value="10">10</option>
@@ -118,7 +118,7 @@ export default function CabinetRegisterPage() {
             <select
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 outline-none focus:border-teal"
+              className="field mt-2 px-3 py-2.5"
             >
               <option value="math">Математика</option>
               <option value="ukr">Українська</option>
@@ -133,14 +133,14 @@ export default function CabinetRegisterPage() {
             <input
               value={parentName}
               onChange={(e) => setParentName(e.target.value)}
-              className="mt-2 w-full rounded-xl border border-line bg-white px-3 py-2.5 outline-none focus:border-teal"
+              className="field mt-2 px-3 py-2.5"
             />
           </label>
           {error && <p className="sm:col-span-2 text-sm text-amber">{error}</p>}
           <button
             type="submit"
             disabled={loading}
-            className="sm:col-span-2 rounded-full bg-amber px-5 py-3 text-sm font-semibold text-ink disabled:opacity-50"
+            className="sm:col-span-2 rounded-full bg-amber px-5 py-3 text-sm font-semibold text-night disabled:opacity-50"
           >
             {loading ? "Створюємо…" : "Створити кабінет"}
           </button>

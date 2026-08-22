@@ -1,0 +1,760 @@
+{
+  "id": "m7-12",
+  "moduleId": "m7",
+  "title": "Пробний НМТ №12",
+  "slug": "m7-12",
+  "order": 12,
+  "status": "ready",
+  "objectives": [
+    "Пройти 22 завдання за 60 хв",
+    "Набрати звичку до шкали 0–32",
+    "Закрити слабкі теги уроками"
+  ],
+  "nmtTags": [
+    "mock НМТ"
+  ],
+  "subtopics": [
+    "15 вибір",
+    "3 пари",
+    "4 відкриті"
+  ],
+  "theory": [
+    {
+      "type": "heading",
+      "content": "Імітація формату НМТ"
+    },
+    {
+      "type": "paragraph",
+      "content": "Пробний варіант №12: 15 вибір + 3 логічні пари + 4 відкриті. 60 хвилин, максимум 32. Працюй із таймером у кабінеті."
+    },
+    {
+      "type": "list",
+      "content": "Після здачі:",
+      "items": [
+        "Відкрий «Роботу над помилками» — кожне завдання веде на урок-тег",
+        "Якщо <16 тестових — тиждень фундаменту, не наступний mock",
+        "Якщо ≥24 — розбір лише дорогих відкритих і геометрії"
+      ]
+    },
+    {
+      "type": "tip",
+      "content": "Запис ефіру розбору mock доступний 24 год. ДЗ/тест не згорає того ж дня при блекауті — допиши, коли з’явиться світло."
+    },
+    {
+      "type": "tip",
+      "content": "Після перевірки відкрий «Роботу над помилками»: кожне завдання веде на урок-тег."
+    }
+  ],
+  "quizCards": [
+    {
+      "id": "m7-12-c01",
+      "front": "Скільки завдань?",
+      "back": "22"
+    },
+    {
+      "id": "m7-12-c02",
+      "front": "Максимум тестових балів",
+      "back": "32"
+    },
+    {
+      "id": "m7-12-c03",
+      "front": "Час",
+      "back": "60 хв"
+    },
+    {
+      "id": "m7-12-c04",
+      "front": "Вибір (1–15)",
+      "back": "по 1 балу"
+    },
+    {
+      "id": "m7-12-c05",
+      "front": "Пари (16–18)",
+      "back": "по 1 за правильну пару"
+    },
+    {
+      "id": "m7-12-c06",
+      "front": "Відкриті (19–22)",
+      "back": "по 2 бали"
+    },
+    {
+      "id": "m7-12-c07",
+      "front": "Стратегія",
+      "back": "спочатку впевнені"
+    },
+    {
+      "id": "m7-12-c08",
+      "front": "Відкриті",
+      "back": "не пропускай — навіть оцінка"
+    },
+    {
+      "id": "m7-12-c09",
+      "front": "Після тесту",
+      "back": "теги помилок → уроки"
+    },
+    {
+      "id": "m7-12-c10",
+      "front": "Таймер",
+      "back": "як на НМТ, без паузи в ідеалі"
+    },
+    {
+      "id": "m7-12-c11",
+      "front": "Довідка",
+      "back": "формули видають"
+    },
+    {
+      "id": "m7-12-c12",
+      "front": "Чернетка",
+      "back": "не перевіряють"
+    },
+    {
+      "id": "m7-12-c13",
+      "front": "Бал за відкрите",
+      "back": "2"
+    },
+    {
+      "id": "m7-12-c14",
+      "front": "Макс тестових",
+      "back": "32"
+    },
+    {
+      "id": "m7-12-c15",
+      "front": "Бал за відкрите",
+      "back": "2"
+    },
+    {
+      "id": "m7-12-c16",
+      "front": "Макс тестових",
+      "back": "32"
+    }
+  ],
+  "homework": [
+    {
+      "id": "m7-12-h01",
+      "type": "single",
+      "prompt": "(1/2)^−2 =",
+      "options": [
+        {
+          "key": "А",
+          "text": "1/4"
+        },
+        {
+          "key": "Б",
+          "text": "4"
+        },
+        {
+          "key": "В",
+          "text": "−4"
+        },
+        {
+          "key": "Г",
+          "text": "1/2"
+        },
+        {
+          "key": "Д",
+          "text": "2"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "4.",
+      "reviewLessonId": "m1-04"
+    },
+    {
+      "id": "m7-12-h02",
+      "type": "single",
+      "prompt": "5−x=2x+2. x=",
+      "options": [
+        {
+          "key": "А",
+          "text": "1"
+        },
+        {
+          "key": "Б",
+          "text": "3"
+        },
+        {
+          "key": "В",
+          "text": "−1"
+        },
+        {
+          "key": "Г",
+          "text": "7"
+        },
+        {
+          "key": "Д",
+          "text": "0"
+        }
+      ],
+      "answer": "А",
+      "explanation": "1.",
+      "reviewLessonId": "m2-01"
+    },
+    {
+      "id": "m7-12-h03",
+      "type": "single",
+      "prompt": "D для x²−6x+9:",
+      "options": [
+        {
+          "key": "А",
+          "text": "0"
+        },
+        {
+          "key": "Б",
+          "text": "36"
+        },
+        {
+          "key": "В",
+          "text": "9"
+        },
+        {
+          "key": "Г",
+          "text": "−9"
+        },
+        {
+          "key": "Д",
+          "text": "12"
+        }
+      ],
+      "answer": "А",
+      "explanation": "0.",
+      "reviewLessonId": "m2-02"
+    },
+    {
+      "id": "m7-12-h04",
+      "type": "single",
+      "prompt": "Знижка 10% від 90:",
+      "options": [
+        {
+          "key": "А",
+          "text": "9"
+        },
+        {
+          "key": "Б",
+          "text": "81"
+        },
+        {
+          "key": "В",
+          "text": "80"
+        },
+        {
+          "key": "Г",
+          "text": "99"
+        },
+        {
+          "key": "Д",
+          "text": "10"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "81.",
+      "reviewLessonId": "m1-03"
+    },
+    {
+      "id": "m7-12-h05",
+      "type": "single",
+      "prompt": "|x+3|=0. x=",
+      "options": [
+        {
+          "key": "А",
+          "text": "3"
+        },
+        {
+          "key": "Б",
+          "text": "−3"
+        },
+        {
+          "key": "В",
+          "text": "0"
+        },
+        {
+          "key": "Г",
+          "text": "∅"
+        },
+        {
+          "key": "Д",
+          "text": "±3"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "−3.",
+      "reviewLessonId": "m1-06"
+    },
+    {
+      "id": "m7-12-h06",
+      "type": "single",
+      "prompt": "√(36/49) =",
+      "options": [
+        {
+          "key": "А",
+          "text": "6/7"
+        },
+        {
+          "key": "Б",
+          "text": "6/49"
+        },
+        {
+          "key": "В",
+          "text": "36/7"
+        },
+        {
+          "key": "Г",
+          "text": "√6/7"
+        },
+        {
+          "key": "Д",
+          "text": "7/6"
+        }
+      ],
+      "answer": "А",
+      "explanation": "6/7.",
+      "reviewLessonId": "m1-08"
+    },
+    {
+      "id": "m7-12-h07",
+      "type": "single",
+      "prompt": "log_10 0,01 =",
+      "options": [
+        {
+          "key": "А",
+          "text": "2"
+        },
+        {
+          "key": "Б",
+          "text": "−2"
+        },
+        {
+          "key": "В",
+          "text": "100"
+        },
+        {
+          "key": "Г",
+          "text": "0"
+        },
+        {
+          "key": "Д",
+          "text": "1"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "−2.",
+      "reviewLessonId": "m1-10"
+    },
+    {
+      "id": "m7-12-h08",
+      "type": "single",
+      "prompt": "sin 0° =",
+      "options": [
+        {
+          "key": "А",
+          "text": "1"
+        },
+        {
+          "key": "Б",
+          "text": "0"
+        },
+        {
+          "key": "В",
+          "text": "−1"
+        },
+        {
+          "key": "Г",
+          "text": "1/2"
+        },
+        {
+          "key": "Д",
+          "text": "не існує"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "0.",
+      "reviewLessonId": "m1-11"
+    },
+    {
+      "id": "m7-12-h09",
+      "type": "single",
+      "prompt": "Суміжний до 55°:",
+      "options": [
+        {
+          "key": "А",
+          "text": "35"
+        },
+        {
+          "key": "Б",
+          "text": "125"
+        },
+        {
+          "key": "В",
+          "text": "55"
+        },
+        {
+          "key": "Г",
+          "text": "90"
+        },
+        {
+          "key": "Д",
+          "text": "145"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "125.",
+      "reviewLessonId": "m5-01"
+    },
+    {
+      "id": "m7-12-h10",
+      "type": "single",
+      "prompt": "k=2, Sмал=7. Sвел=",
+      "options": [
+        {
+          "key": "А",
+          "text": "14"
+        },
+        {
+          "key": "Б",
+          "text": "28"
+        },
+        {
+          "key": "В",
+          "text": "9"
+        },
+        {
+          "key": "Г",
+          "text": "49"
+        },
+        {
+          "key": "Д",
+          "text": "4"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "28.",
+      "reviewLessonId": "m5-04"
+    },
+    {
+      "id": "m7-12-h11",
+      "type": "single",
+      "prompt": "q=3, b1=2, b3=",
+      "options": [
+        {
+          "key": "А",
+          "text": "6"
+        },
+        {
+          "key": "Б",
+          "text": "18"
+        },
+        {
+          "key": "В",
+          "text": "8"
+        },
+        {
+          "key": "Г",
+          "text": "5"
+        },
+        {
+          "key": "Д",
+          "text": "12"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "2·9=18.",
+      "reviewLessonId": "m3-08"
+    },
+    {
+      "id": "m7-12-h12",
+      "type": "single",
+      "prompt": "C_6^1 =",
+      "options": [
+        {
+          "key": "А",
+          "text": "1"
+        },
+        {
+          "key": "Б",
+          "text": "6"
+        },
+        {
+          "key": "В",
+          "text": "15"
+        },
+        {
+          "key": "Г",
+          "text": "30"
+        },
+        {
+          "key": "Д",
+          "text": "720"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "6.",
+      "reviewLessonId": "m4-02"
+    },
+    {
+      "id": "m7-12-h13",
+      "type": "single",
+      "prompt": "S круга r=5, коеф. π:",
+      "options": [
+        {
+          "key": "А",
+          "text": "5"
+        },
+        {
+          "key": "Б",
+          "text": "10"
+        },
+        {
+          "key": "В",
+          "text": "25"
+        },
+        {
+          "key": "Г",
+          "text": "50"
+        },
+        {
+          "key": "Д",
+          "text": "π"
+        }
+      ],
+      "answer": "В",
+      "explanation": "25.",
+      "reviewLessonId": "m5-06"
+    },
+    {
+      "id": "m7-12-h14",
+      "type": "single",
+      "prompt": "f(x)=x^4, f'=",
+      "options": [
+        {
+          "key": "А",
+          "text": "4x³"
+        },
+        {
+          "key": "Б",
+          "text": "x³"
+        },
+        {
+          "key": "В",
+          "text": "4x"
+        },
+        {
+          "key": "Г",
+          "text": "4"
+        },
+        {
+          "key": "Д",
+          "text": "x^5"
+        }
+      ],
+      "answer": "А",
+      "explanation": "4x³.",
+      "reviewLessonId": "m3-09"
+    },
+    {
+      "id": "m7-12-h15",
+      "type": "single",
+      "prompt": "V кулі r=1, коеф. π (4/3 r³):",
+      "options": [
+        {
+          "key": "А",
+          "text": "4/3"
+        },
+        {
+          "key": "Б",
+          "text": "4"
+        },
+        {
+          "key": "В",
+          "text": "1"
+        },
+        {
+          "key": "Г",
+          "text": "2/3"
+        },
+        {
+          "key": "Д",
+          "text": "3"
+        }
+      ],
+      "answer": "А",
+      "explanation": "4/3.",
+      "reviewLessonId": "m6-05"
+    },
+    {
+      "id": "m7-12-h16",
+      "type": "match",
+      "prompt": "Нерівності",
+      "left": [
+        {
+          "key": "1",
+          "text": "x≥1"
+        },
+        {
+          "key": "2",
+          "text": "|x|<2"
+        },
+        {
+          "key": "3",
+          "text": "x²<0"
+        }
+      ],
+      "right": [
+        {
+          "key": "А",
+          "text": "[1;∞)"
+        },
+        {
+          "key": "Б",
+          "text": "(−2;2)"
+        },
+        {
+          "key": "В",
+          "text": "∅"
+        },
+        {
+          "key": "Г",
+          "text": "(1;∞)"
+        },
+        {
+          "key": "Д",
+          "text": "R"
+        }
+      ],
+      "answer": {
+        "1": "А",
+        "2": "Б",
+        "3": "В"
+      },
+      "explanation": "Класика.",
+      "reviewLessonId": "m2-09"
+    },
+    {
+      "id": "m7-12-h17",
+      "type": "match",
+      "prompt": "Координати",
+      "left": [
+        {
+          "key": "1",
+          "text": "d (0,0)(9,12)"
+        },
+        {
+          "key": "2",
+          "text": "середина (0,0)(6,4) x"
+        },
+        {
+          "key": "3",
+          "text": "k (0,0)(1,5)"
+        }
+      ],
+      "right": [
+        {
+          "key": "А",
+          "text": "15"
+        },
+        {
+          "key": "Б",
+          "text": "3"
+        },
+        {
+          "key": "В",
+          "text": "5"
+        },
+        {
+          "key": "Г",
+          "text": "13"
+        },
+        {
+          "key": "Д",
+          "text": "1"
+        }
+      ],
+      "answer": {
+        "1": "А",
+        "2": "Б",
+        "3": "В"
+      },
+      "explanation": "15;3;5.",
+      "reviewLessonId": "m5-08"
+    },
+    {
+      "id": "m7-12-h18",
+      "type": "match",
+      "prompt": "Ймовірність / статистика",
+      "left": [
+        {
+          "key": "1",
+          "text": "монета"
+        },
+        {
+          "key": "2",
+          "text": "мода 3,3,5"
+        },
+        {
+          "key": "3",
+          "text": "медіана 1,4,8"
+        }
+      ],
+      "right": [
+        {
+          "key": "А",
+          "text": "1/2"
+        },
+        {
+          "key": "Б",
+          "text": "3"
+        },
+        {
+          "key": "В",
+          "text": "4"
+        },
+        {
+          "key": "Г",
+          "text": "5"
+        },
+        {
+          "key": "Д",
+          "text": "1"
+        }
+      ],
+      "answer": {
+        "1": "А",
+        "2": "Б",
+        "3": "В"
+      },
+      "explanation": "1/2;3;4.",
+      "reviewLessonId": "m4-04"
+    },
+    {
+      "id": "m7-12-h19",
+      "type": "open",
+      "prompt": "log_2(x)=4. x=",
+      "answer": "16",
+      "explanation": "16.",
+      "reviewLessonId": "m2-07"
+    },
+    {
+      "id": "m7-12-h20",
+      "type": "open",
+      "prompt": "S ромба d=8 і 10",
+      "answer": "40",
+      "explanation": "40.",
+      "reviewLessonId": "m5-05"
+    },
+    {
+      "id": "m7-12-h21",
+      "type": "open",
+      "prompt": "3! + 2!",
+      "answer": "8",
+      "explanation": "6+2=8.",
+      "reviewLessonId": "m4-02"
+    },
+    {
+      "id": "m7-12-h22",
+      "type": "open",
+      "prompt": "V конуса Sосн=12 H=5",
+      "answer": "20",
+      "explanation": "20.",
+      "reviewLessonId": "m6-04"
+    }
+  ],
+  "liveTopic": "4 задачі з теми «Пробний НМТ №12» + розбір типових помилок ДЗ",
+  "videoUrl": null
+}

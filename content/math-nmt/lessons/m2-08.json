@@ -6,230 +6,179 @@
   "order": 8,
   "status": "ready",
   "objectives": [
-    "Знати найпростіші рівняння",
-    "Працювати з періодом",
-    "Відбирати корені на проміжку"
+    "sin x = a, cos x = a",
+    "Загальні розв’язки з довідки",
+    "Особливі 0, ±1"
   ],
   "nmtTags": [
     "рівняння",
-    "тригонометричні"
+    "тригонометрія"
   ],
-  "subtopics": [],
+  "subtopics": [
+    "sin=a",
+    "коло",
+    "проміжок"
+  ],
   "theory": [
     {
       "type": "heading",
-      "content": "Найпростіші"
+      "content": "Навіщо цей урок на НМТ"
+    },
+    {
+      "type": "paragraph",
+      "content": "На НМТ частіше конкретний проміжок або табличне значення, не вся серія. Довідка: загальний розв’язок."
+    },
+    {
+      "type": "heading",
+      "content": "База"
     },
     {
       "type": "formula",
-      "content": "sin x = a  (|a|≤1) — серія розв’язків через arcsin"
+      "content": "sin x = a (|a|≤1): x = (−1)^k arcsin a + πk"
     },
     {
       "type": "formula",
-      "content": "cos x = a;  tg x = a — відповідні загальні формули (у довідці/підручнику)"
+      "content": "cos x = a: x = ±arccos a + 2πk"
     },
     {
-      "type": "example",
-      "content": "sin x = 0 ⇒ x = πk, k ∈ Z"
+      "type": "formula",
+      "content": "tg x = a: x = arctg a + πk"
+    },
+    {
+      "type": "paragraph",
+      "content": "sin x=0 ⇒ x=πk. cos x=0 ⇒ x=π/2+πk. sin x=1 ⇒ π/2+2πk. |a|>1 → ∅."
     },
     {
       "type": "tip",
-      "content": "На НМТ часто достатньо табличних кутів і відбору на відрізку."
+      "content": "Градуси: sin x=1/2 на [0°;180°] — 30° і 150°. Не забудь другий кут."
+    },
+    {
+      "type": "example",
+      "content": "sin x=0",
+      "items": [
+        "x=πk."
+      ]
+    },
+    {
+      "type": "example",
+      "content": "cos x=1/2, x∈[0;2π)",
+      "items": [
+        "x=π/3, 5π/3."
+      ]
+    },
+    {
+      "type": "example",
+      "content": "sin x=2",
+      "items": [
+        "∅."
+      ]
+    },
+    {
+      "type": "list",
+      "content": "Чек-лист помилок:",
+      "items": [
+        "|права|>1 — ∅.",
+        "Два кути на колі для sin/cos.",
+        "tg: період π, не 2π.",
+        "Одиниці: градуси vs радіани — як у завданні."
+      ]
+    },
+    {
+      "type": "heading",
+      "content": "Вихід з уроку"
+    },
+    {
+      "type": "paragraph",
+      "content": "Якщо <70% ДЗ — повтор карток і 1 розбір. Якщо ≥85% — наступний урок за планом тижня. Рівень C: базові задачі. Рівень A: відкриті «як дорогі» в кінці ДЗ."
     }
   ],
   "quizCards": [
     {
       "id": "m2-08-c01",
-      "front": "sin x = 0",
-      "back": "x=πk"
+      "front": "sin x=0",
+      "back": "πk"
     },
     {
       "id": "m2-08-c02",
-      "front": "cos x = 0",
-      "back": "x=π/2 + πk"
+      "front": "cos x=0",
+      "back": "π/2+πk"
     },
     {
       "id": "m2-08-c03",
-      "front": "sin x = 1",
-      "back": "x=π/2 + 2πk"
+      "front": "sin x=1",
+      "back": "π/2+2πk"
     },
     {
       "id": "m2-08-c04",
-      "front": "cos x = 1",
-      "back": "x=2πk"
+      "front": "cos x=1",
+      "back": "2πk"
     },
     {
       "id": "m2-08-c05",
-      "front": "sin x = 1/2",
-      "back": "30° + … / 150° + …"
-    },
-    {
-      "id": "m2-08-c06",
-      "front": "|a|>1 у sin x=a",
+      "front": "sin x=2",
       "back": "∅"
     },
     {
+      "id": "m2-08-c06",
+      "front": "sin 30°",
+      "back": "1/2"
+    },
+    {
       "id": "m2-08-c07",
-      "front": "Період sin, cos",
-      "back": "2π"
+      "front": "другий кут sin",
+      "back": "180°−α"
     },
     {
       "id": "m2-08-c08",
-      "front": "Період tg",
+      "front": "tg період",
       "back": "π"
     },
     {
       "id": "m2-08-c09",
-      "front": "ОДЗ tg x",
-      "back": "cos x ≠ 0"
+      "front": "cos період",
+      "back": "2π"
     },
     {
       "id": "m2-08-c10",
-      "front": "Перевірка на відрізку",
-      "back": "відбір коренів"
+      "front": "arcsin",
+      "back": "довідка"
     },
     {
       "id": "m2-08-c11",
-      "front": "cos x = −1",
-      "back": "x=π+2πk"
+      "front": "|a|>1",
+      "back": "∅"
     },
     {
       "id": "m2-08-c12",
-      "front": "sin²+cos²",
-      "back": "1 — для спрощення"
+      "front": "tg 45°",
+      "back": "1"
+    },
+    {
+      "id": "m2-08-c13",
+      "front": "Проміжок",
+      "back": "відібрати"
+    },
+    {
+      "id": "m2-08-c14",
+      "front": "cos x=1/2",
+      "back": "±π/3+2πk"
+    },
+    {
+      "id": "m2-08-c15",
+      "front": "sin x=−1",
+      "back": "−π/2+2πk"
+    },
+    {
+      "id": "m2-08-c16",
+      "front": "НМТ",
+      "back": "таблиця+коло"
     }
   ],
   "homework": [
     {
       "id": "m2-08-h1",
       "type": "single",
-      "prompt": "sin x = 2 має розв’язків:",
-      "options": [
-        {
-          "key": "А",
-          "text": "∞"
-        },
-        {
-          "key": "Б",
-          "text": "2"
-        },
-        {
-          "key": "В",
-          "text": "1"
-        },
-        {
-          "key": "Г",
-          "text": "0"
-        },
-        {
-          "key": "Д",
-          "text": "4"
-        }
-      ],
-      "answer": "Г",
-      "explanation": "|sin|≤1."
-    },
-    {
-      "id": "m2-08-h2",
-      "type": "open",
-      "prompt": "Найменший невід’ємний корінь sin x = 0 (у градусах):",
-      "answer": "0",
-      "explanation": "x=0°."
-    },
-    {
-      "id": "m2-08-h3",
-      "type": "open",
-      "prompt": "cos 0° =",
-      "answer": "1",
-      "explanation": "1."
-    },
-    {
-      "id": "m2-08-h4",
-      "type": "single",
-      "prompt": "На [0°; 180°] рівняння sin x = 1/2 має коренів:",
-      "options": [
-        {
-          "key": "А",
-          "text": "0"
-        },
-        {
-          "key": "Б",
-          "text": "1"
-        },
-        {
-          "key": "В",
-          "text": "2"
-        },
-        {
-          "key": "Г",
-          "text": "3"
-        },
-        {
-          "key": "Д",
-          "text": "4"
-        }
-      ],
-      "answer": "В",
-      "explanation": "30° і 150°."
-    },
-    {
-      "id": "m2-08-h5",
-      "type": "match",
-      "prompt": "Рівняння → особливість",
-      "left": [
-        {
-          "key": "1",
-          "text": "sin x = 2"
-        },
-        {
-          "key": "2",
-          "text": "sin x = 0"
-        },
-        {
-          "key": "3",
-          "text": "cos x = 1"
-        }
-      ],
-      "right": [
-        {
-          "key": "А",
-          "text": "∅"
-        },
-        {
-          "key": "Б",
-          "text": "x=πk"
-        },
-        {
-          "key": "В",
-          "text": "x=2πk"
-        },
-        {
-          "key": "Г",
-          "text": "x=π/2"
-        },
-        {
-          "key": "Д",
-          "text": "x=π"
-        }
-      ],
-      "answer": {
-        "1": "А",
-        "2": "Б",
-        "3": "В"
-      },
-      "explanation": "∅; πk; 2πk."
-    },
-    {
-      "id": "m2-08-h6",
-      "type": "open",
-      "prompt": "tg 45° =",
-      "answer": "1",
-      "explanation": "1."
-    },
-    {
-      "id": "m2-08-h7",
-      "type": "single",
-      "prompt": "Період функції y = sin x:",
+      "prompt": "sin x=2 у R:",
       "options": [
         {
           "key": "А",
@@ -237,23 +186,240 @@
         },
         {
           "key": "Б",
-          "text": "π"
+          "text": "90°"
         },
         {
           "key": "В",
-          "text": "2π"
+          "text": "∅"
         },
         {
           "key": "Г",
-          "text": "4π"
+          "text": "0"
+        },
+        {
+          "key": "Д",
+          "text": "π"
+        }
+      ],
+      "answer": "В",
+      "explanation": "|sin|≤1."
+    },
+    {
+      "id": "m2-08-h2",
+      "type": "open",
+      "prompt": "Менший додатний градус: sin x=1/2",
+      "answer": "30",
+      "explanation": "30°."
+    },
+    {
+      "id": "m2-08-h3",
+      "type": "single",
+      "prompt": "cos x=1. Найменший невід’ємний:",
+      "options": [
+        {
+          "key": "А",
+          "text": "0"
+        },
+        {
+          "key": "Б",
+          "text": "90"
+        },
+        {
+          "key": "В",
+          "text": "180"
+        },
+        {
+          "key": "Г",
+          "text": "360"
         },
         {
           "key": "Д",
           "text": "1"
         }
       ],
-      "answer": "В",
-      "explanation": "2π."
+      "answer": "А",
+      "explanation": "0."
+    },
+    {
+      "id": "m2-08-h4",
+      "type": "single",
+      "prompt": "tg x=1, x∈(0°;180°):",
+      "options": [
+        {
+          "key": "А",
+          "text": "45°"
+        },
+        {
+          "key": "Б",
+          "text": "45° і 225°"
+        },
+        {
+          "key": "В",
+          "text": "45° і 135°"
+        },
+        {
+          "key": "Г",
+          "text": "90°"
+        },
+        {
+          "key": "Д",
+          "text": "∅"
+        }
+      ],
+      "answer": "А",
+      "explanation": "tg 135°=−1, 225° поза проміжком. На (0°;180°) лише 45°."
+    },
+    {
+      "id": "m2-08-h5",
+      "type": "match",
+      "prompt": "Рівняння → найменший ≥0 (градуси)",
+      "left": [
+        {
+          "key": "1",
+          "text": "sin x=0"
+        },
+        {
+          "key": "2",
+          "text": "cos x=0"
+        },
+        {
+          "key": "3",
+          "text": "sin x=1"
+        }
+      ],
+      "right": [
+        {
+          "key": "А",
+          "text": "0"
+        },
+        {
+          "key": "Б",
+          "text": "90"
+        },
+        {
+          "key": "В",
+          "text": "90"
+        },
+        {
+          "key": "Г",
+          "text": "180"
+        },
+        {
+          "key": "Д",
+          "text": "45"
+        }
+      ],
+      "answer": {
+        "1": "А",
+        "2": "Б",
+        "3": "В"
+      },
+      "explanation": "0; 90; 90."
+    },
+    {
+      "id": "m2-08-h6",
+      "type": "open",
+      "prompt": "Другий кут на [0°;180°] для sin=1/2",
+      "answer": "150",
+      "explanation": "150°."
+    },
+    {
+      "id": "m2-08-h7",
+      "type": "single",
+      "prompt": "Кількість коренів sin x=1/2 на [0;2π):",
+      "options": [
+        {
+          "key": "А",
+          "text": "1"
+        },
+        {
+          "key": "Б",
+          "text": "2"
+        },
+        {
+          "key": "В",
+          "text": "3"
+        },
+        {
+          "key": "Г",
+          "text": "4"
+        },
+        {
+          "key": "Д",
+          "text": "0"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "π/6 і 5π/6.",
+      "level": "A"
+    },
+    {
+      "id": "m2-08-h8",
+      "type": "single",
+      "prompt": "cos x=−1. x∈[0;2π):",
+      "options": [
+        {
+          "key": "А",
+          "text": "0"
+        },
+        {
+          "key": "Б",
+          "text": "π"
+        },
+        {
+          "key": "В",
+          "text": "2π лише"
+        },
+        {
+          "key": "Г",
+          "text": "π/2"
+        },
+        {
+          "key": "Д",
+          "text": "∅"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "π. 2π — той самий кут, часто не включають правий кінець."
+    },
+    {
+      "id": "m2-08-h9",
+      "type": "open",
+      "prompt": "sin x=0, найменший додатний градус",
+      "answer": "180",
+      "explanation": "180° (0 не додатний)."
+    },
+    {
+      "id": "m2-08-h10",
+      "type": "single",
+      "prompt": "tg 45°=",
+      "options": [
+        {
+          "key": "А",
+          "text": "0"
+        },
+        {
+          "key": "Б",
+          "text": "1"
+        },
+        {
+          "key": "В",
+          "text": "√3"
+        },
+        {
+          "key": "Г",
+          "text": "не існує"
+        },
+        {
+          "key": "Д",
+          "text": "1/2"
+        }
+      ],
+      "answer": "Б",
+      "explanation": "1.",
+      "level": "C"
     }
-  ]
+  ],
+  "videoUrl": null,
+  "liveTopic": "4 задачі з теми «Тригонометричні рівняння» + розбір типових помилок ДЗ"
 }
